@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-   
+       
     var body: some View {
         NavigationView {
             VStack {
@@ -19,7 +18,7 @@ struct ContentView: View {
                     .padding(.bottom, 50)
                 ForEach(AirFormulas.allCases, id: \.self) { formula in
                     NavigationLink(
-                        destination: FormulaView(formula: formula)) {
+                        destination: RouterView(formula: formula)) {
                     Text(formula.rawValue).bold()
                         .padding()
                         .foregroundColor(.white)
