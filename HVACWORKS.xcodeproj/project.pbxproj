@@ -11,17 +11,25 @@
 		9405861125C24ACB0033CEE7 /* SensibleHeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9405861025C24ACB0033CEE7 /* SensibleHeat.swift */; };
 		9405861425C24AEF0033CEE7 /* TotalHeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9405861325C24AEF0033CEE7 /* TotalHeat.swift */; };
 		9405861725C24B110033CEE7 /* LatentHeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9405861625C24B110033CEE7 /* LatentHeat.swift */; };
-		941476A025C0D894008502B0 /* MixedAirModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9414769F25C0D894008502B0 /* MixedAirModel.swift */; };
+		941476A025C0D894008502B0 /* MixedAirFormula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9414769F25C0D894008502B0 /* MixedAirFormula.swift */; };
 		941476A325C0E289008502B0 /* MixedAirView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941476A225C0E289008502B0 /* MixedAirView.swift */; };
+		94254B9225C81241001E7C8F /* SensibleHeatFormula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94254B9125C81241001E7C8F /* SensibleHeatFormula.swift */; };
+		94254B9525C81600001E7C8F /* LatentHeatFormula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94254B9425C81600001E7C8F /* LatentHeatFormula.swift */; };
 		944856D825C663A600B4CA93 /* FormulaHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944856D725C663A600B4CA93 /* FormulaHeaderView.swift */; };
+		9452964F25C6E7DE00CD6CFD /* NumberEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452964E25C6E7DE00CD6CFD /* NumberEntryView.swift */; };
+		946A851525C7A47600A67900 /* TotalHeatFormula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946A851425C7A47600A67900 /* TotalHeatFormula.swift */; };
+		946A851825C7AAE200A67900 /* SimpleAnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946A851725C7AAE200A67900 /* SimpleAnswerView.swift */; };
 		946B44F325BE4CD400E57066 /* HVACWORKSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946B44F225BE4CD400E57066 /* HVACWORKSApp.swift */; };
 		946B44F525BE4CD400E57066 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946B44F425BE4CD400E57066 /* ContentView.swift */; };
 		946B44F725BE4CD500E57066 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 946B44F625BE4CD500E57066 /* Assets.xcassets */; };
 		946B44FA25BE4CD500E57066 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 946B44F925BE4CD500E57066 /* Preview Assets.xcassets */; };
 		946B450325BE4EA300E57066 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946B450225BE4EA300E57066 /* Helpers.swift */; };
 		94B339CD25C203470080DB8F /* MixedAirResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B339CC25C203470080DB8F /* MixedAirResultView.swift */; };
-		94D35A8525BE57DD00209727 /* FormulaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D35A8425BE57DD00209727 /* FormulaModel.swift */; };
-		94D35A8825BE582000209727 /* FormulaDetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D35A8725BE582000209727 /* FormulaDetailHeader.swift */; };
+		94DD038C25E0511100046018 /* MixedAirFormulaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DD038B25E0511100046018 /* MixedAirFormulaView.swift */; };
+		94DD038E25E0512F00046018 /* TotalHeatFormulaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DD038D25E0512F00046018 /* TotalHeatFormulaView.swift */; };
+		94DD039025E0517C00046018 /* SensibleHeatFormulaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DD038F25E0517C00046018 /* SensibleHeatFormulaView.swift */; };
+		94DD039225E0519500046018 /* LatentHeatFormulaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DD039125E0519500046018 /* LatentHeatFormulaView.swift */; };
+		94F023DF25DF415200974B65 /* FanLawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F023DE25DF415200974B65 /* FanLawView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +37,14 @@
 		9405861025C24ACB0033CEE7 /* SensibleHeat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensibleHeat.swift; sourceTree = "<group>"; };
 		9405861325C24AEF0033CEE7 /* TotalHeat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalHeat.swift; sourceTree = "<group>"; };
 		9405861625C24B110033CEE7 /* LatentHeat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatentHeat.swift; sourceTree = "<group>"; };
-		9414769F25C0D894008502B0 /* MixedAirModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixedAirModel.swift; sourceTree = "<group>"; };
+		9414769F25C0D894008502B0 /* MixedAirFormula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixedAirFormula.swift; sourceTree = "<group>"; };
 		941476A225C0E289008502B0 /* MixedAirView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixedAirView.swift; sourceTree = "<group>"; };
+		94254B9125C81241001E7C8F /* SensibleHeatFormula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensibleHeatFormula.swift; sourceTree = "<group>"; };
+		94254B9425C81600001E7C8F /* LatentHeatFormula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatentHeatFormula.swift; sourceTree = "<group>"; };
 		944856D725C663A600B4CA93 /* FormulaHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaHeaderView.swift; sourceTree = "<group>"; };
+		9452964E25C6E7DE00CD6CFD /* NumberEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberEntryView.swift; sourceTree = "<group>"; };
+		946A851425C7A47600A67900 /* TotalHeatFormula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalHeatFormula.swift; sourceTree = "<group>"; };
+		946A851725C7AAE200A67900 /* SimpleAnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAnswerView.swift; sourceTree = "<group>"; };
 		946B44EF25BE4CD400E57066 /* HVACWORKS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HVACWORKS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		946B44F225BE4CD400E57066 /* HVACWORKSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HVACWORKSApp.swift; sourceTree = "<group>"; };
 		946B44F425BE4CD400E57066 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,8 +53,11 @@
 		946B44FB25BE4CD500E57066 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		946B450225BE4EA300E57066 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		94B339CC25C203470080DB8F /* MixedAirResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixedAirResultView.swift; sourceTree = "<group>"; };
-		94D35A8425BE57DD00209727 /* FormulaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaModel.swift; sourceTree = "<group>"; };
-		94D35A8725BE582000209727 /* FormulaDetailHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaDetailHeader.swift; sourceTree = "<group>"; };
+		94DD038B25E0511100046018 /* MixedAirFormulaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixedAirFormulaView.swift; sourceTree = "<group>"; };
+		94DD038D25E0512F00046018 /* TotalHeatFormulaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalHeatFormulaView.swift; sourceTree = "<group>"; };
+		94DD038F25E0517C00046018 /* SensibleHeatFormulaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensibleHeatFormulaView.swift; sourceTree = "<group>"; };
+		94DD039125E0519500046018 /* LatentHeatFormulaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatentHeatFormulaView.swift; sourceTree = "<group>"; };
+		94F023DE25DF415200974B65 /* FanLawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanLawView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,23 +71,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9414769C25C0C35F008502B0 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				941476A225C0E289008502B0 /* MixedAirView.swift */,
-				9405861625C24B110033CEE7 /* LatentHeat.swift */,
-				9405861025C24ACB0033CEE7 /* SensibleHeat.swift */,
-				9405861325C24AEF0033CEE7 /* TotalHeat.swift */,
-				944856D425C6628F00B4CA93 /* Subviews */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		9414769D25C0C364008502B0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9414769F25C0D894008502B0 /* MixedAirModel.swift */,
+				9414769F25C0D894008502B0 /* MixedAirFormula.swift */,
+				946A851425C7A47600A67900 /* TotalHeatFormula.swift */,
 				946B450225BE4EA300E57066 /* Helpers.swift */,
+				94254B9125C81241001E7C8F /* SensibleHeatFormula.swift */,
+				94254B9425C81600001E7C8F /* LatentHeatFormula.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -79,35 +86,9 @@
 		944856D225C6622D00B4CA93 /* RouterViews */ = {
 			isa = PBXGroup;
 			children = (
-				946B44F425BE4CD400E57066 /* ContentView.swift */,
 				9405860D25C24A020033CEE7 /* RouterView.swift */,
 			);
 			path = RouterViews;
-			sourceTree = "<group>";
-		};
-		944856D325C6624F00B4CA93 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				946B44F225BE4CD400E57066 /* HVACWORKSApp.swift */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		944856D425C6628F00B4CA93 /* Subviews */ = {
-			isa = PBXGroup;
-			children = (
-				944856D525C6631B00B4CA93 /* MixedAir */,
-				944856D725C663A600B4CA93 /* FormulaHeaderView.swift */,
-			);
-			path = Subviews;
-			sourceTree = "<group>";
-		};
-		944856D525C6631B00B4CA93 /* MixedAir */ = {
-			isa = PBXGroup;
-			children = (
-				94B339CC25C203470080DB8F /* MixedAirResultView.swift */,
-			);
-			path = MixedAir;
 			sourceTree = "<group>";
 		};
 		946B44E625BE4CD400E57066 = {
@@ -129,11 +110,10 @@
 		946B44F125BE4CD400E57066 /* HVACWORKS */ = {
 			isa = PBXGroup;
 			children = (
-				944856D325C6624F00B4CA93 /* Main */,
+				94DD039325E051BA00046018 /* Helpers */,
+				946B44F225BE4CD400E57066 /* HVACWORKSApp.swift */,
+				94DD038325E04EBF00046018 /* Screens */,
 				944856D225C6622D00B4CA93 /* RouterViews */,
-				94AA83A825BE661F00E85A76 /* Formulas */,
-				94D35A8725BE582000209727 /* FormulaDetailHeader.swift */,
-				94D35A8425BE57DD00209727 /* FormulaModel.swift */,
 				946B44F625BE4CD500E57066 /* Assets.xcassets */,
 				946B44FB25BE4CD500E57066 /* Info.plist */,
 				946B44F825BE4CD500E57066 /* Preview Content */,
@@ -149,13 +129,89 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		94AA83A825BE661F00E85A76 /* Formulas */ = {
+		94DD038325E04EBF00046018 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				94DD038425E04EC600046018 /* Air Formulas */,
+				94DD038525E04ECC00046018 /* Fan Laws */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		94DD038425E04EC600046018 /* Air Formulas */ = {
 			isa = PBXGroup;
 			children = (
 				9414769D25C0C364008502B0 /* Models */,
-				9414769C25C0C35F008502B0 /* Views */,
+				94DD038625E04EDB00046018 /* Screens */,
 			);
-			path = Formulas;
+			path = "Air Formulas";
+			sourceTree = "<group>";
+		};
+		94DD038525E04ECC00046018 /* Fan Laws */ = {
+			isa = PBXGroup;
+			children = (
+				94DD038925E04FE300046018 /* Screens */,
+			);
+			path = "Fan Laws";
+			sourceTree = "<group>";
+		};
+		94DD038625E04EDB00046018 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				946B44F425BE4CD400E57066 /* ContentView.swift */,
+				94DD038825E04F4F00046018 /* Subscreens */,
+				94DD038725E04EF000046018 /* SubViews */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		94DD038725E04EF000046018 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				94B339CC25C203470080DB8F /* MixedAirResultView.swift */,
+				946A851725C7AAE200A67900 /* SimpleAnswerView.swift */,
+				9452964E25C6E7DE00CD6CFD /* NumberEntryView.swift */,
+				944856D725C663A600B4CA93 /* FormulaHeaderView.swift */,
+				94DD038A25E050D800046018 /* FormulaHeaderSubViews */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		94DD038825E04F4F00046018 /* Subscreens */ = {
+			isa = PBXGroup;
+			children = (
+				941476A225C0E289008502B0 /* MixedAirView.swift */,
+				9405861625C24B110033CEE7 /* LatentHeat.swift */,
+				9405861025C24ACB0033CEE7 /* SensibleHeat.swift */,
+				9405861325C24AEF0033CEE7 /* TotalHeat.swift */,
+			);
+			path = Subscreens;
+			sourceTree = "<group>";
+		};
+		94DD038925E04FE300046018 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				94F023DE25DF415200974B65 /* FanLawView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		94DD038A25E050D800046018 /* FormulaHeaderSubViews */ = {
+			isa = PBXGroup;
+			children = (
+				94DD038B25E0511100046018 /* MixedAirFormulaView.swift */,
+				94DD038D25E0512F00046018 /* TotalHeatFormulaView.swift */,
+				94DD038F25E0517C00046018 /* SensibleHeatFormulaView.swift */,
+				94DD039125E0519500046018 /* LatentHeatFormulaView.swift */,
+			);
+			path = FormulaHeaderSubViews;
+			sourceTree = "<group>";
+		};
+		94DD039325E051BA00046018 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,16 +283,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94D35A8525BE57DD00209727 /* FormulaModel.swift in Sources */,
+				94F023DF25DF415200974B65 /* FanLawView.swift in Sources */,
+				94254B9525C81600001E7C8F /* LatentHeatFormula.swift in Sources */,
+				94254B9225C81241001E7C8F /* SensibleHeatFormula.swift in Sources */,
+				94DD039225E0519500046018 /* LatentHeatFormulaView.swift in Sources */,
 				941476A325C0E289008502B0 /* MixedAirView.swift in Sources */,
+				94DD039025E0517C00046018 /* SensibleHeatFormulaView.swift in Sources */,
+				94DD038C25E0511100046018 /* MixedAirFormulaView.swift in Sources */,
+				9452964F25C6E7DE00CD6CFD /* NumberEntryView.swift in Sources */,
 				946B44F525BE4CD400E57066 /* ContentView.swift in Sources */,
-				941476A025C0D894008502B0 /* MixedAirModel.swift in Sources */,
+				941476A025C0D894008502B0 /* MixedAirFormula.swift in Sources */,
 				9405861425C24AEF0033CEE7 /* TotalHeat.swift in Sources */,
+				946A851825C7AAE200A67900 /* SimpleAnswerView.swift in Sources */,
 				94B339CD25C203470080DB8F /* MixedAirResultView.swift in Sources */,
 				9405861125C24ACB0033CEE7 /* SensibleHeat.swift in Sources */,
 				9405861725C24B110033CEE7 /* LatentHeat.swift in Sources */,
+				94DD038E25E0512F00046018 /* TotalHeatFormulaView.swift in Sources */,
 				946B450325BE4EA300E57066 /* Helpers.swift in Sources */,
-				94D35A8825BE582000209727 /* FormulaDetailHeader.swift in Sources */,
+				946A851525C7A47600A67900 /* TotalHeatFormula.swift in Sources */,
 				944856D825C663A600B4CA93 /* FormulaHeaderView.swift in Sources */,
 				946B44F325BE4CD400E57066 /* HVACWORKSApp.swift in Sources */,
 				9405860E25C24A020033CEE7 /* RouterView.swift in Sources */,
@@ -377,7 +441,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.25;
 				PRODUCT_BUNDLE_IDENTIFIER = com.UDT.HVACWORKS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -400,7 +464,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.25;
 				PRODUCT_BUNDLE_IDENTIFIER = com.UDT.HVACWORKS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

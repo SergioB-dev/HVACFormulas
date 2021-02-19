@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MixedAirView: View {
+struct MixedAirView: View{
     @State private var cfms = ""
     @State private var entries: Double = 0
     @State private var airEntries = [AirData]()
@@ -19,62 +19,35 @@ struct MixedAirView: View {
     @State private var isAnimated = false
     @State private var showingDisclosure = false
     @State private var isFinalAnswerReceived = false
-    @State private var showingDisclosureInfo = false
+
     
-    
-  
-    let mixedAirModel = MixedAir()
+    let mixedAirModel = MixedAirFormula()
     
     var body: some View {
         Group {
             VStack {
-                FormulaHeaderView(showingDisclosureInfo: $showingDisclosureInfo, showingDisclosure: $showingDisclosure, airFormula: .mixedAirTemp, title: "Mixed Air", subtitle: "The final air product entering the return coil.                              ")
+                FormulaHeaderView(showingDisclosure: $showingDisclosure, airFormula: .mixedAirTemp, title: "Mixed Air", subtitle: "The final air product entering the return coil.                              ")
                 
                 Group {
                     VStack {
-                        HStack {
                             VStack{
                                 if isAnimated {
                                     Text("Step 1: Enter entries").bold()
+                                    Text("At least 2 entries")
+                                        .font(.caption)
                                 }
-                                TextField("Temperature (Fº)", text: $temp)
-                                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                                    .keyboardType(.numberPad)
+                                NumberEntryView(firstEntry: $temp, secondEntry: $cfm, selection: .constant(0), firstEntryPlaceHolder: "Temperature (Fº)", secondEntryPlaceHolder: "Cubic Feet / Minute", isLatentHeat: false) {
+                                    increment()
+                                    self.hideKeyboard()
+                                }
                                 
-                                TextField("Cubic feet per minute (CFM)", text: $cfm)
-                                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                                    .keyboardType(.numberPad)
                                 
                                 
                             }.padding(.horizontal)
-                            Button(action: {
-                                increment()
-                            }) {
-                                VStack {
-                                    
-                                        Image(systemName: "arrow.down")
-                                            .imageScale(.large)
-                                            .opacity(isAnimated ? 1.0 : 0.0)
-                                            .offset(x: 0, y: isAnimated ? -30 : 0)
-                                            .animation(Animation.linear
-                                                        .repeatForever())
-                                    if isAnimated {
-                                        
-                                        Text("Step 2").bold()
-                                    }
-                                    Image(systemName: "plus.diamond")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .padding()
-                                        .foregroundColor(.blue)
-                                        .minimumScaleFactor(0.5)
-                                }
-                            }.frame(width: 100)
-                            .buttonStyle(PlainButtonStyle())
-                        }
                         Picker("Indoor or Outdoor Air", selection: $indoorAir) {
                             Text("Indoor").tag(true)
                             Text("Outdoor").tag(false)
+                                .foregroundColor(.orange)
                         }.pickerStyle(SegmentedPickerStyle())
                         
                         Group {
@@ -110,21 +83,23 @@ struct MixedAirView: View {
                                             .padding()
                                         }
                                     }
+                                
                                 }
                             }
                         }
+                       Spacer()
                         MixedAirResultView(isAnimated: $isAnimated,
                                            myClosure: mixedAirIs,
                                            result: mixedAirFinal,
                                            data: airEntries,
                                             isFinalAnswerReceived: $isFinalAnswerReceived)
-                    }.opacity(showingDisclosure || showingDisclosureInfo ? 0.0 : 1.0)
+                    }.opacity(showingDisclosure ? 0.0 : 1.0)
                 }
                 
                 
                 Spacer()
-                
-            }
+            }.navigationBarBackButtonHidden(showingDisclosure ? true : false)
+            .padding(.top, showingDisclosure ?  100 : 0)
         }
     }
     func increment() {
@@ -180,7 +155,10 @@ struct MixedAirView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        MixedAirView()
+        NavigationView {
+            MixedAirView()
+        }
     }
 }
+
 

@@ -7,10 +7,7 @@
 
 import Foundation
 
-struct MixedAir {
-    
-    
-    
+struct MixedAirFormula {
     
     func cfmPercentages(cfmComponent x: [Double]) -> [Double]{
         

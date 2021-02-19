@@ -36,5 +36,210 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "485E95F2-9085-4D5D-B00D-1C6B7284D880"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HVACWORKS/Formulas/Views/TotalHeat.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F699EC35-5980-42AD-9591-4DF1ABF5CD96"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HVACWORKS/Formulas/Views/NumberEntryView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "NumberEntryView"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "F699EC35-5980-42AD-9591-4DF1ABF5CD96 - 5e75f268b18010fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HVACWORKS.NumberEntryView.selection.getter : Swift.Int"
+                  moduleName = "HVACWORKS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shakur/Desktop/App%20Production/Self/Development/HVACWORKS/HVACWORKS/Formulas/Views/NumberEntryView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "160">
+               </Location>
+               <Location
+                  uuid = "F699EC35-5980-42AD-9591-4DF1ABF5CD96 - d9374e29981f2c89"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HVACWORKS.NumberEntryView.selection.setter : Swift.Int"
+                  moduleName = "HVACWORKS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shakur/Desktop/App%20Production/Self/Development/HVACWORKS/HVACWORKS/Formulas/Views/NumberEntryView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  uuid = "F699EC35-5980-42AD-9591-4DF1ABF5CD96 - cf049d1eacbd3fe9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HVACWORKS.NumberEntryView.selection.modify : Swift.Int"
+                  moduleName = "HVACWORKS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shakur/Desktop/App%20Production/Self/Development/HVACWORKS/HVACWORKS/Formulas/Views/NumberEntryView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "F699EC35-5980-42AD-9591-4DF1ABF5CD96 - 99d088ec087f6589"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HVACWORKS.NumberEntryView.selection.modify : Swift.Int with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "HVACWORKS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shakur/Desktop/App%20Production/Self/Development/HVACWORKS/HVACWORKS/Formulas/Views/NumberEntryView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "F699EC35-5980-42AD-9591-4DF1ABF5CD96 - f594ce0ec9599041"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HVACWORKS.NumberEntryView.$selection.getter : SwiftUI.Binding&lt;Swift.Int&gt;"
+                  moduleName = "HVACWORKS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shakur/Desktop/App%20Production/Self/Development/HVACWORKS/HVACWORKS/Formulas/Views/NumberEntryView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "184">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "039ABC61-A607-4089-AE84-5264B306A5E1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HVACWORKS/Formulas/Views/NumberEntryView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1549664D-1090-45ED-A438-FDC578175A8A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HVACWORKS/Formulas/Views/NumberEntryView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4DC2EFEA-FC5C-4777-AA6B-F68CD389A74E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HVACWORKS/Formulas/Views/NumberEntryView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F5A458D2-C92D-4186-BB2A-D762B47487B0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HVACWORKS/Formulas/Views/MixedAirView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "F5A458D2-C92D-4186-BB2A-D762B47487B0 - 62de1925b9c9551e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.pickerStyle&lt;A where A1: SwiftUI.PickerStyle&gt;(A1) -&gt; some&gt;&gt;.0, SwiftUI.Group&lt;SwiftUI.ScrollView&lt;SwiftUI.HStack&lt;SwiftUI.ForEach&lt;Swift.Array&lt;(Swift.Int, HVACWORKS.AirData)&gt;, Swift.Int, SwiftUI.Button&lt;&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;&gt;&gt;&gt;&gt;, SwiftUI.Spacer, HVACWORKS.MixedAirResultView)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.opacity(Swift.Double) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(HVACWORKS.FormulaHeaderView, SwiftUI.Group&lt;&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.opacity(Swift.Double) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Spacer)&gt; in closure #1 () -&gt; SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(HVACWORKS.FormulaHeaderView, SwiftUI.Group&lt;&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.opacity(Swift.Double) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Spacer)&gt;&gt; in HVACWORKS.MixedAirView.body.getter : some"
+                  moduleName = "HVACWORKS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shakur/Desktop/App%20Production/Self/Development/HVACWORKS/HVACWORKS/Formulas/Views/MixedAirView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "1676">
+               </Location>
+               <Location
+                  uuid = "F5A458D2-C92D-4186-BB2A-D762B47487B0 - 11d32ee604404c5d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.tag&lt;A where A1: Swift.Hashable&gt;(A1) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.pickerStyle&lt;A where A1: SwiftUI.PickerStyle&gt;(A1) -&gt; some&gt;&gt;.0, SwiftUI.Group&lt;SwiftUI.ScrollView&lt;SwiftUI.HStack&lt;SwiftUI.ForEach&lt;Swift.Array&lt;(Swift.Int, HVACWORKS.AirData)&gt;, Swift.Int, SwiftUI.Button&lt;&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;&gt;&gt;&gt;&gt;, SwiftUI.Spacer, HVACWORKS.MixedAirResultView)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.opacity(Swift.Double) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(HVACWORKS.FormulaHeaderView, SwiftUI.Group&lt;&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.opacity(Swift.Double) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Spacer)&gt; in closure #1 () -&gt; SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(HVACWORKS.FormulaHeaderView, SwiftUI.Group&lt;&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.opacity(Swift.Double) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Spacer)&gt;&gt; in HVACWORKS.MixedAirView.body.getter : some"
+                  moduleName = "HVACWORKS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shakur/Desktop/App%20Production/Self/Development/HVACWORKS/HVACWORKS/Formulas/Views/MixedAirView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "76">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

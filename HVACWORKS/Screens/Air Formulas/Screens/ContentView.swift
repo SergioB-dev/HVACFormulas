@@ -16,7 +16,7 @@ struct ContentView: View {
                 Text("Air Formulas").fontWeight(.black)
                     .font(.title)
                     .padding(.bottom, 50)
-                ForEach(AirFormulas.allCases, id: \.self) { formula in
+                ForEach(Formulas.allCases, id: \.self) { formula in
                     NavigationLink(
                         destination: RouterView(formula: formula)) {
                     Text(formula.rawValue).bold()

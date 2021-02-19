@@ -24,10 +24,9 @@ struct MixedAirResultView: View {
             HStack {
                 Text("Total CFM:").bold()
                 Text(String(data.reduce(0) { (start, finish) in start + finish.cfm }))
-            }.padding(.bottom, 20)
+            }
             HStack {
                 Text("Mixed Air Temperature: ").bold()
-                    .padding(.horizontal)
                 Text(String(format: "%.2f", result))
                     .scaleEffect(isFinalAnswerReceived ? 1.5 : 1.0)
                     .foregroundColor(isFinalAnswerReceived ? .green : .primary)
@@ -47,7 +46,8 @@ struct MixedAirResultView: View {
                     .foregroundColor(.white)
                     .background(data.count <= 1 ? Color.gray : .blue)
                     .cornerRadius(10)
-            }.alert(isPresented: $isShowingAlert) {
+            }.opacity(data.count >= 2 ? 1.0 : 0.5)
+            .alert(isPresented: $isShowingAlert) {
                 Alert(title: Text("Must first enter at least 2 entries"), message: nil, dismissButton: .default(Text("Ok")) {
                     self.isAnimated = true
                 }

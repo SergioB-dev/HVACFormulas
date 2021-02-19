@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct RouterView: View {
-    let formula: AirFormulas
+    let formula: Formulas
     var body: some View {
        router(formula: formula)
         
     }
-    @ViewBuilder func router(formula: AirFormulas) -> some View {
+    @ViewBuilder func router(formula: Formulas) -> some View {
         switch formula {
         case .mixedAirTemp:
             MixedAirView()
@@ -23,7 +23,9 @@ struct RouterView: View {
             LatentHeat()
         case .sensibleHeat:
             SensibleHeat()
-                }
+        case .fanLaw:
+            FanLawView()
+        }
     }
 }
 
