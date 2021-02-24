@@ -32,3 +32,10 @@ struct TotalHeatFormulaView: View {
     }
 }
 
+struct totalHeat_preview: PreviewProvider {
+    static var platform: PreviewPlatform = .iOS
+    static var previews: some View {
+        TotalHeatFormulaView()
+            
+    }
+}

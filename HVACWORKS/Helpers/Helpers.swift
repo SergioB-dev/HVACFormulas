@@ -19,8 +19,7 @@ enum Formulas: String, CaseIterable {
     case totalHeat = "Total Heat"
     case fanLaw = "Fan Law"
     
-  
-
+ 
     
 
     
@@ -74,4 +73,19 @@ extension View {
 enum DisclosureType {
     
     case formula
+}
+
+
+/**
+Fan Laws
+
+# CFM varies directly as the rpm
+* Fan Law 1 = (CFM2 / CFM1) = (RPM2 / RPM1)
+
+# Static pressure varies as the square of the rpm
+* Fan Law 2 = (SP2 / SP1) = (RPM2 / RPM1)²
+*/
+ enum FanLawSelection {
+    case fanLaw1
+    case fanLaw2
 }
