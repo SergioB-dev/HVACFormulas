@@ -27,23 +27,20 @@ struct FanLawView: View {
     var body: some View {
         VStack {
             FormulaHeaderView(showingDisclosure: $showingDisclosure, airFormula: .fanLaw, title: "Fan Law", subtitle: "How air movement is in proportion to other states")
-            //if !showingDisclosure {
+            if !showingDisclosure {
                 Group {
                     Picker(selection: $fanSelection.animation(), label: Text("Fan")) {
                         Text("Fan Law 1").tag(FanLawSelection.fanLaw1)
                         Text("Fan Law 2").tag(FanLawSelection.fanLaw2)
                     }.pickerStyle(SegmentedPickerStyle())
                     
-                    FanLaw1EntryView(firstEntry: $firstEntry, secondEntry: $secondEntry, thirdEntry: $thirdEntry, actionCode: $actionCode)
+                    FanLaw1EntryView(fanLaw: $fanSelection, firstEntry: $firstEntry, secondEntry: $secondEntry, thirdEntry: $thirdEntry, actionCode: $actionCode)
                     
                 }
-           // }
+            }
             Spacer()
         }
     }
-    
-   
-    
 }
 
 struct FanLawView_Previews: PreviewProvider {
@@ -55,11 +52,5 @@ struct FanLawView_Previews: PreviewProvider {
 
 //MARK:- TODO: Fix this and continue to make FanLawView dynamic using this ViewBuilder
 
-//@ViewBuilder func fanLaw1or2View(x: Int) {
-//    if x > 0 {
-//    Text("Positive")
-//    } else {
-//        Text("Negative")
-//    }
-//}
+
 

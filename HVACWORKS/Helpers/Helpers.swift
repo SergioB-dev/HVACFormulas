@@ -89,3 +89,21 @@ Fan Laws
     case fanLaw1
     case fanLaw2
 }
+
+ enum FanLaw1ButtonSelection {
+    case cfm
+    case rpm
+}
+
+enum FanLaw2ButtonSelection {
+    case cfm
+    case rpm
+    case hertz
+    case staticPressure
+}
+
+
+ func successVibrate() {
+    let generator = UINotificationFeedbackGenerator()
+    generator.notificationOccurred(.success)
+}

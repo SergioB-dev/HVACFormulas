@@ -9,13 +9,17 @@ import SwiftUI
 /// Struct responsible for producing Fan Laws output data
 
 struct FanLaw1EntryView: View {
-    @State private var buttonState: ButtonSelection = .cfm
+    @State private var buttonState: FanLaw1ButtonSelection = .cfm
+    @Binding var fanLaw: FanLawSelection
     @Binding var firstEntry: String
     @Binding var secondEntry: String
     ///For this calcualation, an alternative variable is needed. EX: If we have both CFM1 and CFM2 then we need one RPM variable, and if we have both RPMS then we need one CFM variable.
     @Binding var thirdEntry: String
     @State private var firstEntryPlaceHolder = "CFM1"
     @State private var secondEntryPlaceHolder = "CFM2"
+    @State private var answer = ""
+    
+    let vm = FanLawViewModel()
     var thirdEntryPlaceHolder: String {
         textSelection(cfmOrRpm: buttonState)
     }
@@ -23,46 +27,7 @@ struct FanLaw1EntryView: View {
     var body: some View {
         VStack {
             
-            HStack {
-                Spacer()
-                VStack {
-                    Button(action: {
-                        
-                        self.buttonState = .cfm
-                        self.firstEntryPlaceHolder = "CFM1"
-                        self.secondEntryPlaceHolder = "CFM2"
-                        successVibrate()
-                            
-                    }){
-                        Image(systemName: buttonState == .cfm ? "checkmark.square.fill" : "square")
-                            
-                            .imageScale(.large)
-                            .padding([.horizontal, .top] )
-                    }
-                    Text("CFM")
-                        .padding(.top, 5)
-                        
-                }
-                Spacer()
-                VStack {
-                    Button(action: {
-                       
-                        self.buttonState = .rpm
-                        self.firstEntryPlaceHolder = "RPM1"
-                        self.secondEntryPlaceHolder = "RPM2"
-                        successVibrate()
-                        
-                    }){
-                        Image(systemName: buttonState == .cfm ? "square" : "checkmark.square.fill")
-                            .imageScale(.large)
-                            .padding([.horizontal, .top] )
-                    }
-                    Text("RPM")
-                        .padding(.top, 5)
-                        
-                }
-                Spacer()
-            }.padding()
+            VariableEntryView(fanLaw: $fanLaw, buttonState: $buttonState, firstEntryPlaceHolder: $firstEntryPlaceHolder, secondEntryPlaceHolder: $secondEntryPlaceHolder)
             TextField(firstEntryPlaceHolder, text: $firstEntry)
                 .personalizeTextField()
             
@@ -71,26 +36,35 @@ struct FanLaw1EntryView: View {
             
             TextField(thirdEntryPlaceHolder, text: $thirdEntry)
                 .personalizeTextField()
-            
-                Button(action: { actionCode() }) {
+            Spacer()
+            if !answer.isEmpty {
+                HStack {
+                    Text("\(thirdEntryPlaceHolder):").bold()
+                        .padding(.trailing)
+                    Text(answer)
+                }
+            }
+            Spacer()
+            Button(action: {
+                    self.answer = vm.calculateFanLaw1(
+                        firstEntry: firstEntry,
+                        secondEntry: secondEntry,
+                        rpm: thirdEntry)
+                print(firstEntry, secondEntry, thirdEntry, answer)
+                        clearAnswers()
+                AppStoreReviewManager.requestReviewIfAppropriate()
+            }) {
                     Text("Enter")
                         .padding()
-                        .frame(height: 40)
+                        .frame(width: 100, height: 40)
                         .background(Color.blue)
                         .foregroundColor(.white)
                         .cornerRadius(4.0)
-                        .frame(height: 40)
                 }.buttonStyle(PlainButtonStyle())
-                
-               
-            
-            
-
-            
         }
     }
     /// Changes placeholder text of Textfield to show appropriate entry.
-    private func textSelection(cfmOrRpm buttonState: ButtonSelection) -> String {
+    private func textSelection(cfmOrRpm buttonState: FanLaw1ButtonSelection) -> String {
         switch buttonState {
         case .cfm:
             return "RPM"
@@ -98,21 +72,17 @@ struct FanLaw1EntryView: View {
             return "CFM"
         }
     }
-    
-    private enum ButtonSelection {
-        case cfm
-        case rpm
-    }
-    
-    private func successVibrate() {
-        let generator = UINotificationFeedbackGenerator()
-        generator.notificationOccurred(.success)
+    private func clearAnswers() {
+        self.firstEntry = ""
+        self.secondEntry = ""
+        self.thirdEntry = ""
     }
 }
 
 struct FanLaw1EntryView_Previews: PreviewProvider {
     static var previews: some View {
-        FanLaw1EntryView(firstEntry: .constant("CFM"), secondEntry: .constant("RPM"), thirdEntry: .constant("RPM"),
+        FanLaw1EntryView(fanLaw: .constant(.fanLaw1), firstEntry: .constant("CFM"), secondEntry: .constant("RPM"), thirdEntry: .constant("RPM"),
                          actionCode: .constant({ }))
     }
 }
+

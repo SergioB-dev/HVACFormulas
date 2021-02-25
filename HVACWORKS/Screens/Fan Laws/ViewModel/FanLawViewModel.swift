@@ -8,8 +8,13 @@
 import Foundation
 
 struct FanLawViewModel {
-    func calculateFanLaw1(firstEntry: Double, secondEntry: Double, rpm: Double) -> Double {
-        let percentage = secondEntry / firstEntry
-        return rpm * percentage
+    func calculateFanLaw1(firstEntry: String,
+                          secondEntry: String,
+                          rpm: String) -> String {
+        guard let firstRealNumber = Double(firstEntry),
+              let secondRealNumber = Double(secondEntry),
+              let rpmNumber = Double(rpm) else { return "0"}
+        let percentage = secondRealNumber / firstRealNumber
+        return (rpmNumber * percentage).withCommas()
     }
 }

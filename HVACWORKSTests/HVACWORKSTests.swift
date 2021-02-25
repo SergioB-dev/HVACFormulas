@@ -8,6 +8,19 @@
 import XCTest
 @testable import HVACWORKS
 
+
+class FormulaTests: XCTestCase {
+    func testFanLaw1() {
+        let vm = FanLawViewModel()
+        let firstVar = "1000"
+        let secondVar = "675"
+        let thirdVar = "10000"
+        let answer: Double = 6750
+        XCTAssertEqual(vm.calculateFanLaw1(firstEntry: firstVar, secondEntry: secondVar, rpm: thirdVar), answer, accuracy: 1)
+    }
+}
+
+
 class StudentTest: XCTestCase {
     
     /// There should be no GPA for students with no grades
