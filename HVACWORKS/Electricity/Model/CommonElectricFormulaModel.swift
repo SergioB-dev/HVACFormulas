@@ -38,12 +38,15 @@ struct ElectricUnit: View, Identifiable  {
     }
     
     private func toggleButtonBorder(border isAlreadyOn: Bool) {
-        
+        guard vm.answer == 0 else { return }
         if isAlreadyOn {
                 vm.selectedIntForButton.remove(index)
         } else {
             guard vm.selectedIntForButton.count < 2 else { return }
+            DispatchQueue.main.async {
                 vm.selectedIntForButton.insert(index)
+                successVibrate()
+            }
         }
         borderOn.toggle()
         }

@@ -8,7 +8,9 @@
 import Foundation
 
 
-struct FanLawViewModel {
+class FanLawViewModel: ObservableObject {
+    ///Entry for answer of FanLawView
+    @Published var thirdEntry = ""
     func calculateFanLaw1(firstEntry: String,
                           secondEntry: String,
                           rpm: String) -> String {

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MultiEntryElectricView: View {
+    @State private var lhs = ""
+    @State private var rhs = ""
     @StateObject var vm = ElectricViewModel()
     @State private var selectedElectricUnit: CommonElectricalUnits? = nil
     @State private var disabledElectricUnit: CommonElectricalUnits?
@@ -18,7 +20,11 @@ struct MultiEntryElectricView: View {
                 .padding(.bottom)
             
             VariableSelectionView(vm: vm, selectedElectricUnit: $selectedElectricUnit, buttonSelection: $buttonSelection, unit: $buttonSelection)
+           showRows()
+        
             Spacer()
+            Text("Capacitance & Inductance coming soon")
+                .foregroundColor(.secondary)
         }
     }
 //    private enum Stage {
@@ -27,6 +33,11 @@ struct MultiEntryElectricView: View {
 //        case stage3
 //        case stage4
 //    }
+    @ViewBuilder func showRows() -> some View {
+        if vm.selectedIntForButton.count > 1 {
+            VariableEntryRowView(vm: vm, selectedElectricalUnit: $selectedElectricUnit)
+        } 
+    }
 }
 
 struct MultiEntryElectricView_Previews: PreviewProvider {
@@ -43,6 +54,19 @@ enum CommonElectricalUnits: String, CaseIterable, Identifiable {
     
     var id: String {
         self.rawValue
+    }
+    
+    var symbol: String {
+        switch self {
+        case .amps:
+            return "A"
+        case .ohms:
+            return "Ω"
+        case .volts:
+            return "V"
+        case .watts:
+            return "W"
+        }
     }
 }
 

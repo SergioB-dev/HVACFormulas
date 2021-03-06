@@ -16,7 +16,7 @@ struct VariableSelectionView: View {
         Group {
             if vm.stage.contains(.stage1) {
                 VStack(alignment: .leading) {
-                    Text("Which variables do you know").bold()
+                    Text("Which variables do you know?").bold()
                         .padding(0)
                     Text("Must select two").foregroundColor(.secondary)
                         .font(.caption)

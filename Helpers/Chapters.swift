@@ -20,7 +20,7 @@ struct Chapter: Identifiable {
     static let allChapters = [
         Chapter(name: "Air Formulas", content: ["Latent Heat", "Sensible Heat", "Total Heat", "Mixed Air"], thumbnail: "", category: .air, inCurrentVersion: true),
         Chapter(name: "Fan Laws", content: ["Fan Law #1", "Fan Law #2"], thumbnail: "", category: .fanLaws, inCurrentVersion: true),
-        Chapter(name: "Electricity", content: ["Ohms law", "Voltage", "Current", "Resistance", "Power", "Capacitance", "Inductance"], thumbnail: "", category: .elec, inCurrentVersion: false),
+        Chapter(name: "Electricity", content: ["Ohms law", "Voltage", "Current", "Resistance", "Power", "Capacitance", "Inductance"], thumbnail: "", category: .elec, inCurrentVersion: true),
         Chapter(name: "Refrigerant", content: ["Every PT Chart", "More to come"], thumbnail: "", category: .refrigerantFormulas, inCurrentVersion: false)
     ]
     

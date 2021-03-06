@@ -13,8 +13,8 @@ struct HVACWORKSApp: App {
         WindowGroup {
             
             NavigationView {
-               // HomeView()
-                MultiEntryElectricView()
+                HomeView()
+                
             }
         }
     }

@@ -79,6 +79,11 @@ struct HomeView: View {
                             tag: 1,
                             selection: $selection,
                             label: {EmptyView()})
+                        NavigationLink(
+                            destination: MultiEntryElectricView(),
+                            tag: 2,
+                            selection: $selection,
+                            label: {EmptyView()})
                         Button(action: {
                             self.selection = index
                         }) { Text("Go").foregroundColor(.white)

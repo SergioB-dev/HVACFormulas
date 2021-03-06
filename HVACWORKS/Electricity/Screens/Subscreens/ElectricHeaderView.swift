@@ -17,22 +17,28 @@ struct ElectricHeaderView: View {
                 .headerView()
             HStack {
                 ForEach(CommonElectricalUnits.allCases) { unit in
-                    Button(action: {self.selectedElectricalUnit = unit
+                    Button(action: {
+                        guard vm.stage.isEmpty else { return }
+                        self.selectedElectricalUnit = unit
+                        self.vm.selectedElectricalUnit = unit
                         withAnimation {
                             vm.stage.insert(.stage1)
                         }
+                        successVibrate()
                     }){
-                        
                         Text(unit.rawValue)
                     }.buttonStyle(MyButtonStyle())
                     
                 }
-                }
-        }.navigationTitle("Electric Calculator ⚡️")
-        .navigationBarTitleDisplayMode(.inline)
+            }
+        }
+        
         .navigationBarItems(trailing: Button(action: {
             vm.stage.removeAll()
             vm.selectedIntForButton.removeAll()
+            vm.answer = 0
+            vm.selectedElectricalUnit = nil
+            
         }){
             Text("Reset").opacity(vm.stage.isEmpty ? 0 : 1)
         })

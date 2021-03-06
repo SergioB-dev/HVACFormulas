@@ -105,7 +105,7 @@ enum FanLaw2ButtonSelection {
 struct MyButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .frame(width: 60)
+            .frame(maxWidth: 50)
             .padding()
             .background(Color.blue)
             .foregroundColor(.white)
@@ -122,7 +122,7 @@ struct SecondaryButton: ButtonStyle {
     let disabled: Bool
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .frame(width: 60)
+            .frame(maxWidth: 50)
             .padding()
             .background(disabled ? Color.gray : .orange)
             .foregroundColor(.white)

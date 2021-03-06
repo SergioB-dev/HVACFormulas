@@ -40,6 +40,19 @@ struct FanLawView: View {
             Spacer()
         }
     }
+//    @propertyWrapper
+//    struct CustomPicker {
+//        var startValue: FanLawSelection = .fanLaw1
+//        var wrappedValue: FanLawSelection {
+//            get {
+//                startValue
+//            }
+//            set {
+//                wrappedValue = newValue
+//                thirdEntry = ""
+//            }
+//        }
+//    }
 }
 
 struct FanLawView_Previews: PreviewProvider {
