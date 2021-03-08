@@ -18,8 +18,9 @@ struct NumberEntryView: View {
     var secondEntryPlaceHolder: String
     let isLatentHeat: Bool
     let actionCode: () -> ()
+    let destructiveActionCode: () -> Void
    
-    init(firstEntry: Binding<String>, secondEntry: Binding<String>, selection: Binding<Int>, firstEntryPlaceHolder: String, secondEntryPlaceHolder: String, isLatentHeat: Bool, actionCode: @escaping () -> ()) {
+    init(firstEntry: Binding<String>, secondEntry: Binding<String>, selection: Binding<Int>, firstEntryPlaceHolder: String, secondEntryPlaceHolder: String, isLatentHeat: Bool, actionCode: @escaping () -> (), destructiveActionCode: @escaping () -> Void) {
         
         self._firstEntry = firstEntry
         self._secondEntry = secondEntry
@@ -28,6 +29,7 @@ struct NumberEntryView: View {
         self.secondEntryPlaceHolder = secondEntryPlaceHolder
         self.isLatentHeat = isLatentHeat
         self.actionCode = actionCode
+        self.destructiveActionCode = destructiveActionCode
         
         UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(hue: 0.60, saturation: 0.80, brightness: 1, alpha: 1)
         UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
@@ -56,7 +58,18 @@ struct NumberEntryView: View {
                 .padding(.bottom)
                 
             }
-            
+            HStack {
+                Button(action: { destructiveActionCode() }) {
+                    Text("Reset")
+                        .padding()
+                        .frame(height: 40)
+                        .background(Color.red)
+                        .foregroundColor(.white)
+                        .cornerRadius(4.0)
+                        .frame(height: 40)
+                }.buttonStyle(PlainButtonStyle())
+                
+                
                 Button(action: { actionCode() }) {
                     Text("Enter")
                         .padding()
@@ -66,7 +79,7 @@ struct NumberEntryView: View {
                         .cornerRadius(4.0)
                         .frame(height: 40)
                 }.buttonStyle(PlainButtonStyle())
-                
+            }
                
             
         }

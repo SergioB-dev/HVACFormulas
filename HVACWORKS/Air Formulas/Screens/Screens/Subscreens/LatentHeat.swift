@@ -35,10 +35,14 @@ struct LatentHeat: View {
                 self.secondEntry = ""
                 self.hideKeyboard()
                 AppStoreReviewManager.requestReviewIfAppropriate()
-            }).opacity(showingDisclosure || showingDisclosureInfo ? 0 : 1.0)
+            }, destructiveActionCode: clearData).opacity(showingDisclosure || showingDisclosureInfo ? 0 : 1.0)
             Spacer()
             SimpleAnswerView(firstParam: "Total CFM", secondParam: "Latent Heat", firstOutput: cfm, secondOutput: answer, buttonLabel: "Find Latent Heat")
         }
+    }
+    private func clearData() {
+        self.firstEntry = ""
+        self.secondEntry = ""
     }
 }
 

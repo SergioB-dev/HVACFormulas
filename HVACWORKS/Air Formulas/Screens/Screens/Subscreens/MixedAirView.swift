@@ -36,11 +36,11 @@ struct MixedAirView: View{
                                     Text("At least 2 entries")
                                         .font(.caption)
                                 }
-                                NumberEntryView(firstEntry: $temp, secondEntry: $cfm, selection: .constant(0), firstEntryPlaceHolder: "Temperature (Fº)", secondEntryPlaceHolder: "Cubic Feet / Minute", isLatentHeat: false) {
-                                    increment()
-                                    self.hideKeyboard()
+                                NumberEntryView(firstEntry: $temp, secondEntry: $cfm, selection: .constant(0), firstEntryPlaceHolder: "Temperature (Fº)", secondEntryPlaceHolder: "Cubic Feet / Minute", isLatentHeat: false,
+                                                actionCode: { increment()
+                                                self.hideKeyboard()}) {
+                                    clearData()
                                 }
-                                
                                 
                                 
                             }.padding(.horizontal)
@@ -150,7 +150,11 @@ struct MixedAirView: View{
         
         
     }
-    
+    private func clearData () {
+        self.temp = ""
+        self.cfm = ""
+        self.airEntries = []
+    }
   
     
 }
