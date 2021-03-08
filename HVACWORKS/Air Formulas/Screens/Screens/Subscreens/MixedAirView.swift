@@ -101,7 +101,13 @@ struct MixedAirView: View{
             }.navigationBarBackButtonHidden(showingDisclosure ? true : false)
             .padding(.top, showingDisclosure ?  100 : 0)
         }
+      
+        
     }
+    
+    private func endEditing() {
+            UIApplication.shared.endEditing()
+        }
     private func increment() {
         self.isFinalAnswerReceived = false
         guard !temp.isEmpty, !cfm.isEmpty else {
@@ -155,8 +161,24 @@ struct MixedAirView: View{
         self.cfm = ""
         self.airEntries = []
     }
+    
+    
   
     
+}
+
+struct Background<Content: View>: View  {
+    private var content: Content
+    
+    init(@ViewBuilder content: @escaping () -> Content) {
+        self.content = content()
+    }
+    
+    var body: some View {
+        Color.clear
+            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+            .overlay(content)
+    }
 }
 
 struct DetailView_Previews: PreviewProvider {

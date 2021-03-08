@@ -15,24 +15,27 @@ struct MultiEntryElectricView: View {
     @State private var disabledElectricUnit: CommonElectricalUnits?
     @State private var buttonSelection: CommonElectricalUnits?
     var body: some View {
-        VStack  {
-            ElectricHeaderView(vm: vm, selectedElectricalUnit: $selectedElectricUnit)
-                .padding(.bottom)
+        Group {
+            VStack  {
+                ElectricHeaderView(vm: vm, selectedElectricalUnit: $selectedElectricUnit)
+                    .padding(.bottom)
+                
+                VariableSelectionView(vm: vm, selectedElectricUnit: $selectedElectricUnit, buttonSelection: $buttonSelection, unit: $buttonSelection)
+               showRows()
             
-            VariableSelectionView(vm: vm, selectedElectricUnit: $selectedElectricUnit, buttonSelection: $buttonSelection, unit: $buttonSelection)
-           showRows()
-        
-            Spacer()
-            Text("Capacitance & Inductance coming soon")
-                .foregroundColor(.secondary)
+                Spacer()
+                Text("Capacitance & Inductance coming soon")
+                    .foregroundColor(.secondary)
+            }
+        }.contentShape(Rectangle())
+        .onTapGesture {
+            endEditing()
         }
     }
-//    private enum Stage {
-//        case stage1
-//        case stage2
-//        case stage3
-//        case stage4
-//    }
+    private func endEditing() {
+        UIApplication.shared.endEditing()
+    }
+
     @ViewBuilder func showRows() -> some View {
         if vm.selectedIntForButton.count > 1 {
             VariableEntryRowView(vm: vm, selectedElectricalUnit: $selectedElectricUnit)

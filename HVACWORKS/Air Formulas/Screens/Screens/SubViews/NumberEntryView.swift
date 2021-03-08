@@ -59,8 +59,9 @@ struct NumberEntryView: View {
                 
             }
             HStack {
+                Spacer()
                 Button(action: { destructiveActionCode() }) {
-                    Text("Reset")
+                    Text("Reset").bold()
                         .padding()
                         .frame(height: 40)
                         .background(Color.red)
@@ -68,10 +69,10 @@ struct NumberEntryView: View {
                         .cornerRadius(4.0)
                         .frame(height: 40)
                 }.buttonStyle(PlainButtonStyle())
-                
+                Spacer()
                 
                 Button(action: { actionCode() }) {
-                    Text("Enter")
+                    Text("Enter").bold()
                         .padding()
                         .frame(height: 40)
                         .background(Color.blue)
@@ -79,6 +80,7 @@ struct NumberEntryView: View {
                         .cornerRadius(4.0)
                         .frame(height: 40)
                 }.buttonStyle(PlainButtonStyle())
+                Spacer()
             }
                
             

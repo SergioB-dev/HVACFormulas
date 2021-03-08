@@ -20,16 +20,25 @@ struct TotalHeat: View {
     let totalHeat = TotalHeatFormula()
 
     var body: some View {
-        VStack {
-            FormulaHeaderView(showingDisclosure: $showingDisclosure, airFormula: .totalHeat, title: "Total Heat", subtitle: "Total heat is the total heat content of the air - the sum of both sensible and latent heat")
-            NumberEntryView(firstEntry: $firstEntry, secondEntry: $secondEntry, selection: .constant(0), firstEntryPlaceHolder: "Enthalpy Difference ∆H", secondEntryPlaceHolder: "Cubic Feet per Minute", isLatentHeat: false, actionCode: addData) {
-                deleteData()
+        Group {
+            VStack {
+                FormulaHeaderView(showingDisclosure: $showingDisclosure, airFormula: .totalHeat, title: "Total Heat", subtitle: "Total heat is the total heat content of the air - the sum of both sensible and latent heat")
+                NumberEntryView(firstEntry: $firstEntry, secondEntry: $secondEntry, selection: .constant(0), firstEntryPlaceHolder: "Enthalpy Difference ∆H", secondEntryPlaceHolder: "Cubic Feet per Minute", isLatentHeat: false, actionCode: addData) {
+                    deleteData()
+                }
+                
+                    .opacity(showingDisclosure || showingDisclosureInfo ? 0 : 1.0)
+                Spacer()
+                SimpleAnswerView(firstParam: "Total CFM", secondParam: "Total heat (BTUH)", firstOutput: (Double(cfmValue)?.withCommas()) ?? "0", secondOutput: answer, buttonLabel: "Find Total Heat")
             }
-            
-                .opacity(showingDisclosure || showingDisclosureInfo ? 0 : 1.0)
-            Spacer()
-            SimpleAnswerView(firstParam: "Total CFM", secondParam: "Total heat (BTUH)", firstOutput: (Double(cfmValue)?.withCommas()) ?? "0", secondOutput: answer, buttonLabel: "Find Total Heat")
+        }.contentShape(Rectangle())
+        .onTapGesture {
+            endEditing()
         }
+    }
+    
+    private func endEditing() {
+        UIApplication.shared.endEditing()
     }
     private func addData() {
         self.answer = totalHeat.totalHeat(cfm: firstEntry, deltaH: secondEntry).withCommas()

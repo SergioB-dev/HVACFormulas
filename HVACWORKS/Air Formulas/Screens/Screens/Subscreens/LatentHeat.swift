@@ -26,18 +26,20 @@ struct LatentHeat: View {
     }
             
     var body: some View {
-        VStack {
-            FormulaHeaderView(showingDisclosure: $showingDisclosure, airFormula: .latentHeat, title: "Latent Heat", subtitle: "Latent is the heat involved in substances changing state as opposed to heat that is sensible")
-            NumberEntryView(firstEntry: $firstEntry, secondEntry: $secondEntry, selection: $selection, firstEntryPlaceHolder: placeholder, secondEntryPlaceHolder: "Cubic Feet per Minute", isLatentHeat: true, actionCode: {
-                self.answer = latentHeat.latentHeat(selection: self.selection, variable: self.firstEntry, cfm: self.secondEntry)()
-                self.cfm = self.secondEntry
-                self.firstEntry = ""
-                self.secondEntry = ""
-                self.hideKeyboard()
-                AppStoreReviewManager.requestReviewIfAppropriate()
-            }, destructiveActionCode: clearData).opacity(showingDisclosure || showingDisclosureInfo ? 0 : 1.0)
-            Spacer()
-            SimpleAnswerView(firstParam: "Total CFM", secondParam: "Latent Heat", firstOutput: cfm, secondOutput: answer, buttonLabel: "Find Latent Heat")
+        Group {
+            VStack {
+                FormulaHeaderView(showingDisclosure: $showingDisclosure, airFormula: .latentHeat, title: "Latent Heat", subtitle: "Latent is the heat involved in substances changing state as opposed to heat that is sensible")
+                NumberEntryView(firstEntry: $firstEntry, secondEntry: $secondEntry, selection: $selection, firstEntryPlaceHolder: placeholder, secondEntryPlaceHolder: "Cubic Feet per Minute", isLatentHeat: true, actionCode: {
+                    self.answer = latentHeat.latentHeat(selection: self.selection, variable: self.firstEntry, cfm: self.secondEntry)()
+                    self.cfm = self.secondEntry
+                    self.firstEntry = ""
+                    self.secondEntry = ""
+                    self.hideKeyboard()
+                    AppStoreReviewManager.requestReviewIfAppropriate()
+                }, destructiveActionCode: clearData).opacity(showingDisclosure || showingDisclosureInfo ? 0 : 1.0)
+                Spacer()
+                SimpleAnswerView(firstParam: "Total CFM", secondParam: "Latent Heat", firstOutput: cfm, secondOutput: answer, buttonLabel: "Find Latent Heat")
+            }
         }
     }
     private func clearData() {

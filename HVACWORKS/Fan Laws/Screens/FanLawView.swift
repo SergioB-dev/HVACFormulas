@@ -23,21 +23,25 @@ struct FanLawView: View {
     
     
     var body: some View {
-        VStack {
-            FormulaHeaderView(showingDisclosure: $showingDisclosure, airFormula: .fanLaw, title: "Fan Law", subtitle: "Laws governing CFM, RPM, Hertz, Static Pressure")
-            if !showingDisclosure {
-                Group {
-                    Picker(selection: $vm.fanLawSelection.animation(), label: Text("Fan")) {
-                        Text("Fan Law 1").tag(FanLawSelection.fanLaw1)
-                        Text("Fan Law 2").tag(FanLawSelection.fanLaw2)
-                    }.pickerStyle(SegmentedPickerStyle())
-                    FanLaw1EntryView(vm: vm, fanLaw: $vm.fanLawSelection, firstEntry: $vm.firstEntry, secondEntry: $vm.secondEntry, calculatingSP: $calculatingSP, thirdEntry: $vm.thirdEntry, actionCode: $actionCode)
+        Group {
+            VStack {
+                FormulaHeaderView(showingDisclosure: $showingDisclosure, airFormula: .fanLaw, title: "Fan Law", subtitle: "Laws governing CFM, RPM, Hertz, Static Pressure")
+                if !showingDisclosure {
+                    Group {
+                        Picker(selection: $vm.fanLawSelection.animation(), label: Text("Fan")) {
+                            Text("Fan Law 1").tag(FanLawSelection.fanLaw1)
+                            Text("Fan Law 2").tag(FanLawSelection.fanLaw2)
+                        }.pickerStyle(SegmentedPickerStyle())
+                        FanLaw1EntryView(vm: vm, fanLaw: $vm.fanLawSelection, firstEntry: $vm.firstEntry, secondEntry: $vm.secondEntry, calculatingSP: $calculatingSP, thirdEntry: $vm.thirdEntry, actionCode: $actionCode)
+                    }
                 }
+                Spacer()
             }
-            Spacer()
         }
     }
-  
+    private func endEditing() {
+        UIApplication.shared.endEditing()
+    }
 }
 
 struct FanLawView_Previews: PreviewProvider {

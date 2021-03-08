@@ -26,6 +26,7 @@
 		946B44F725BE4CD500E57066 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 946B44F625BE4CD500E57066 /* Assets.xcassets */; };
 		946B44FA25BE4CD500E57066 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 946B44F925BE4CD500E57066 /* Preview Assets.xcassets */; };
 		946B450325BE4EA300E57066 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946B450225BE4EA300E57066 /* Helpers.swift */; };
+		9476B17925F697C6003BF6B2 /* UIApplication + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9476B17825F697C6003BF6B2 /* UIApplication + Extension.swift */; };
 		9485DAE925E5D1E900884208 /* FanLawViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9485DAE825E5D1E900884208 /* FanLawViewModel.swift */; };
 		9485DAF425E5D4E300884208 /* HVACWORKSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9485DAF325E5D4E300884208 /* HVACWORKSTests.swift */; };
 		9485DAFE25E5D80800884208 /* Practice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9485DAFD25E5D6AF00884208 /* Practice.swift */; };
@@ -82,6 +83,7 @@
 		946B44F925BE4CD500E57066 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		946B44FB25BE4CD500E57066 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		946B450225BE4EA300E57066 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		9476B17825F697C6003BF6B2 /* UIApplication + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication + Extension.swift"; sourceTree = "<group>"; };
 		9485DAE825E5D1E900884208 /* FanLawViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanLawViewModel.swift; sourceTree = "<group>"; };
 		9485DAF125E5D4E300884208 /* HVACWORKSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HVACWORKSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9485DAF325E5D4E300884208 /* HVACWORKSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HVACWORKSTests.swift; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 				9485DB2225E740CC00884208 /* AppReviewManager.swift */,
 				9485DB4125E826A400884208 /* Chapters.swift */,
 				94E545D625EBEA060009F963 /* Text + Extensions.swift */,
+				9476B17825F697C6003BF6B2 /* UIApplication + Extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 				946B450325BE4EA300E57066 /* Helpers.swift in Sources */,
 				946A851525C7A47600A67900 /* TotalHeatFormula.swift in Sources */,
 				944856D825C663A600B4CA93 /* FormulaHeaderView.swift in Sources */,
+				9476B17925F697C6003BF6B2 /* UIApplication + Extension.swift in Sources */,
 				94E545D325EBDC930009F963 /* MultiEntryElectricView.swift in Sources */,
 				9485DB4225E826A400884208 /* Chapters.swift in Sources */,
 				946B44F325BE4CD400E57066 /* HVACWORKSApp.swift in Sources */,
@@ -644,7 +648,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.36.22;
+				MARKETING_VERSION = 1.37.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.UDT.HVACWORKS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -667,7 +671,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.36.22;
+				MARKETING_VERSION = 1.37.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.UDT.HVACWORKS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

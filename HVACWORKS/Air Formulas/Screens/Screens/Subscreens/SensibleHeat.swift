@@ -18,19 +18,27 @@ struct SensibleHeat: View {
     let sensibleHeat = SensibleHeatFormula()
     
     var body: some View {
-        VStack {
-            FormulaHeaderView(showingDisclosure: $showingDisclosure, airFormula: .sensibleHeat, title: "Sensible Heat", subtitle: "Sensible is the heat that can be perceived physically as opposed to Latent Heat")
-            NumberEntryView(firstEntry: $firstEntry, secondEntry: $secondEntry, selection: .constant(0), firstEntryPlaceHolder: "Temperature difference ∆", secondEntryPlaceHolder: "Cubic Feet per Minute", isLatentHeat: false, actionCode: addData) {
-                clearData()
-            } .opacity(showingDisclosure || showingDisclosureInfo ? 0 : 1.0)
-            Spacer()
-            SimpleAnswerView(firstParam: "Total CFM", secondParam: "Sensible Heat (BTUH)", firstOutput: cfmFinal, secondOutput: answer, buttonLabel: "Get Sensible Heat")
+        Group {
+            VStack {
+                FormulaHeaderView(showingDisclosure: $showingDisclosure, airFormula: .sensibleHeat, title: "Sensible Heat", subtitle: "Sensible is the heat that can be perceived physically as opposed to Latent Heat")
+                NumberEntryView(firstEntry: $firstEntry, secondEntry: $secondEntry, selection: .constant(0), firstEntryPlaceHolder: "Temperature difference ∆", secondEntryPlaceHolder: "Cubic Feet per Minute", isLatentHeat: false, actionCode: addData) {
+                    clearData()
+                } .opacity(showingDisclosure || showingDisclosureInfo ? 0 : 1.0)
+                Spacer()
+                SimpleAnswerView(firstParam: "Total CFM", secondParam: "Sensible Heat (BTUH)", firstOutput: cfmFinal, secondOutput: answer, buttonLabel: "Get Sensible Heat")
+            }
+        }.contentShape(Rectangle())
+        .onTapGesture {
+            endEditing()
         }
         
     }
     private func clearData() {
         self.firstEntry = ""
         self.secondEntry = ""
+    }
+    private func endEditing() {
+        UIApplication.shared.endEditing()
     }
     
     private func addData() {
