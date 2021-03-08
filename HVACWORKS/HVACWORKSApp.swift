@@ -12,7 +12,10 @@ struct HVACWORKSApp: App {
     var body: some Scene {
         WindowGroup {
             
-            ContentView()
+            NavigationView {
+                HomeView()
+                
+            }
         }
     }
 }

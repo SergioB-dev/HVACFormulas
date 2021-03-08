@@ -142,42 +142,10 @@
             filePath = "HVACWORKS/Screens/Fan Laws/Screens/FanLawView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "body"
             landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "8FA791BF-FC85-42D1-A983-9C6D6BD9AAF8 - 607e30d23f3c3f14"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.pickerStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.PickerStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, HVACWORKS.FanLaw1EntryView)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(HVACWORKS.FormulaHeaderView, SwiftUI.Group&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.pickerStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.PickerStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, HVACWORKS.FanLaw1EntryView)&gt;&gt;, SwiftUI.Spacer)&gt; in HVACWORKS.FanLawView.body.getter : some"
-                  moduleName = "HVACWORKS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shakur/Desktop/App%20Production/Self/PublishedApps/HVACWORKS/HVACWORKS/Screens/Fan%20Laws/Screens/FanLawView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "360">
-               </Location>
-               <Location
-                  uuid = "8FA791BF-FC85-42D1-A983-9C6D6BD9AAF8 - d4cf41d78ce6aeb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.tag&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Hashable&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.tag&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Hashable&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.pickerStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.PickerStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, HVACWORKS.FanLaw1EntryView)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(HVACWORKS.FormulaHeaderView, SwiftUI.Group&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.pickerStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.PickerStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, HVACWORKS.FanLaw1EntryView)&gt;&gt;, SwiftUI.Spacer)&gt; in HVACWORKS.FanLawView.body.getter : some"
-                  moduleName = "HVACWORKS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shakur/Desktop/App%20Production/Self/PublishedApps/HVACWORKS/HVACWORKS/Screens/Fan%20Laws/Screens/FanLawView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "72">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -190,57 +158,26 @@
             filePath = "HVACWORKS/Screens/Fan Laws/Screens/SubViews/FanLaw1EntryView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "body"
             landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "DE5268C4-8030-4858-885C-7EC7B4C81CA5 - 3956973e8adfe910"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.personalizeTextField() -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.personalizeTextField() -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.personalizeTextField() -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.buttonStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.PrimitiveButtonStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0)&gt; in HVACWORKS.FanLaw1EntryView.body.getter : some"
-                  moduleName = "HVACWORKS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shakur/Desktop/App%20Production/Self/PublishedApps/HVACWORKS/HVACWORKS/Screens/Fan%20Laws/Screens/SubViews/FanLaw1EntryView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "75"
-                  endingLineNumber = "75"
-                  offsetFromSymbolStart = "2416">
-               </Location>
-               <Location
-                  uuid = "DE5268C4-8030-4858-885C-7EC7B4C81CA5 - c56e1991e4ed814b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.personalizeTextField() -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.personalizeTextField() -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.personalizeTextField() -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.buttonStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.PrimitiveButtonStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0)&gt; in HVACWORKS.FanLaw1EntryView.body.getter : some"
-                  moduleName = "HVACWORKS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shakur/Desktop/App%20Production/Self/PublishedApps/HVACWORKS/HVACWORKS/Screens/Fan%20Laws/Screens/SubViews/FanLaw1EntryView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "75"
-                  endingLineNumber = "75"
-                  offsetFromSymbolStart = "24">
-               </Location>
-               <Location
-                  uuid = "DE5268C4-8030-4858-885C-7EC7B4C81CA5 - 1f4a6d859b16b4cd"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #3 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.personalizeTextField() -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.personalizeTextField() -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.personalizeTextField() -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.buttonStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.PrimitiveButtonStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0)&gt; in HVACWORKS.FanLaw1EntryView.body.getter : some"
-                  moduleName = "HVACWORKS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shakur/Desktop/App%20Production/Self/PublishedApps/HVACWORKS/HVACWORKS/Screens/Fan%20Laws/Screens/SubViews/FanLaw1EntryView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "76"
-                  endingLineNumber = "76"
-                  offsetFromSymbolStart = "244">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7EDB4F28-CD97-42AA-8AAC-25B6992693DE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HVACWORKS/Electricity/MultiEntryElectricView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "body"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
