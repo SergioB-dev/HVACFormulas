@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct VariableEntryView: View {
+    @ObservedObject var vm: FanLawViewModel
     @State private var secondButtonState: FanLaw2ButtonSelection = .cfm
     @Binding var fanLaw: FanLawSelection
     @Binding var buttonState: FanLaw1ButtonSelection
@@ -142,7 +143,7 @@ struct VariableEntryView: View {
         }
     }
     private func resetEntries() {
-        guard !answer.isEmpty else { return }
+        guard !vm.answer.isEmpty else { return }
             self.firstEntry = ""
             self.secondEntry = ""
             self.thirdEntry = ""
@@ -154,7 +155,7 @@ struct VariableEntryView: View {
 
 struct VariableEntryView_Previews: PreviewProvider {
     static var previews: some View {
-        VariableEntryView(fanLaw: .constant(.fanLaw1), buttonState: .constant(.cfm), firstEntryPlaceHolder: .constant("Hello"), secondEntryPlaceHolder: .constant("Bye"), firstEntry: .constant("123"), secondEntry: .constant("345"), thirdEntry: .constant("678"), answer: .constant("0"), calculatingSP: .constant(false))
+        VariableEntryView(vm: FanLawViewModel(), fanLaw: .constant(.fanLaw1), buttonState: .constant(.cfm), firstEntryPlaceHolder: .constant("Hello"), secondEntryPlaceHolder: .constant("Bye"), firstEntry: .constant("123"), secondEntry: .constant("345"), thirdEntry: .constant("678"), answer: .constant("0"), calculatingSP: .constant(false))
     }
 }
 

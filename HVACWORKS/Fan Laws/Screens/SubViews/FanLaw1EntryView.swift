@@ -9,6 +9,7 @@ import SwiftUI
 /// Struct responsible for producing Fan Laws output data
 
 struct FanLaw1EntryView: View {
+    @ObservedObject var vm: FanLawViewModel
     @State private var buttonState: FanLaw1ButtonSelection = .cfm
     @Binding var fanLaw: FanLawSelection
     @Binding var firstEntry: String
@@ -20,8 +21,7 @@ struct FanLaw1EntryView: View {
     @State private var secondEntryPlaceHolder = "CFM2"
     
     @State private var answer = ""
-    
-    let vm = FanLawViewModel()
+
     var thirdEntryPlaceHolder: String {
         textSelection(fanLaw: fanLaw )
     }
@@ -29,34 +29,34 @@ struct FanLaw1EntryView: View {
     var body: some View {
         VStack {
             
-            VariableEntryView(fanLaw: $fanLaw, buttonState: $buttonState, firstEntryPlaceHolder: $firstEntryPlaceHolder, secondEntryPlaceHolder: $secondEntryPlaceHolder, firstEntry: $firstEntry, secondEntry: $secondEntry, thirdEntry: $thirdEntry, answer: $answer, calculatingSP: $calculatingSP)
-            TextField(firstEntryPlaceHolder, text: $firstEntry)
+            VariableEntryView(vm: vm, fanLaw: $fanLaw, buttonState: $buttonState, firstEntryPlaceHolder: $firstEntryPlaceHolder, secondEntryPlaceHolder: $secondEntryPlaceHolder, firstEntry: $vm.firstEntry, secondEntry: $vm.secondEntry, thirdEntry: $vm.thirdEntry, answer: $vm.answer, calculatingSP: $calculatingSP)
+            TextField(firstEntryPlaceHolder, text: $vm.firstEntry)
                 .personalizeTextField()
             
-            TextField(secondEntryPlaceHolder, text: $secondEntry)
+            TextField(secondEntryPlaceHolder, text: $vm.secondEntry)
                 .personalizeTextField()
             
-            TextField(thirdEntryPlaceHolder, text: $thirdEntry)
+            TextField(thirdEntryPlaceHolder, text: $vm.thirdEntry)
                 .personalizeTextField()
             Spacer()
-            if !answer.isEmpty {
+            if !vm.answer.isEmpty {
                 HStack {
                     Text("\(thirdEntryPlaceHolder):").bold()
                         .padding(.trailing)
-                    Text(answer)
+                    Text(vm.answer)
                 }
             }
             Spacer()
             Button(action: {
                 if fanLaw == .fanLaw1 {
-                    self.answer = vm.calculateFanLaw1(
-                        firstEntry: firstEntry,
-                        secondEntry: secondEntry,
-                        rpm: thirdEntry)
-                print(firstEntry, secondEntry, thirdEntry, answer)
+                    self.vm.answer = vm.calculateFanLaw1(
+                        firstEntry: vm.firstEntry,
+                        secondEntry: vm.secondEntry,
+                        rpm: vm.thirdEntry)
+                    print(vm.firstEntry, vm.secondEntry, vm.thirdEntry, vm.answer)
                         clearAnswers()
                 } else if fanLaw == .fanLaw2 {
-                    self.answer = vm.calculateFanLaw2(firstEntry: firstEntry, secondEntry: secondEntry, thirdEntry: thirdEntry, fromCFMtoSP: true)
+                    self.vm.answer = vm.calculateFanLaw2(firstEntry: vm.firstEntry, secondEntry: vm.secondEntry, thirdEntry: vm.thirdEntry, fromCFMtoSP: true)
                 }
                 AppStoreReviewManager.requestReviewIfAppropriate()
                 self.hideKeyboard()
@@ -80,16 +80,16 @@ struct FanLaw1EntryView: View {
         }
     }
     private func clearAnswers() {
-        self.firstEntry = ""
-        self.secondEntry = ""
-        self.thirdEntry = ""
+        self.vm.firstEntry = ""
+        self.vm.secondEntry = ""
+        self.vm.thirdEntry = ""
         
     }
 }
 
 struct FanLaw1EntryView_Previews: PreviewProvider {
     static var previews: some View {
-        FanLaw1EntryView(fanLaw: .constant(.fanLaw1), firstEntry: .constant("CFM"), secondEntry: .constant("RPM"), calculatingSP: .constant(false), thirdEntry: .constant("RPM"),
+        FanLaw1EntryView(vm: FanLawViewModel(), fanLaw: .constant(.fanLaw1), firstEntry: .constant("CFM"), secondEntry: .constant("RPM"), calculatingSP: .constant(false), thirdEntry: .constant("RPM"),
                          actionCode: .constant({ }))
     }
 }

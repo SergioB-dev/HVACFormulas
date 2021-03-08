@@ -9,8 +9,18 @@ import Foundation
 
 
 class FanLawViewModel: ObservableObject {
-    ///Entry for answer of FanLawView
+    @Published var answer = ""
+    @Published var firstEntry = ""
+    @Published var secondEntry = ""
     @Published var thirdEntry = ""
+    var fanLawSelection: FanLawSelection = .fanLaw1 {
+        willSet {
+            self.answer = ""
+            self.firstEntry = ""
+            self.secondEntry = ""
+            self.thirdEntry = ""
+        }
+    }
     func calculateFanLaw1(firstEntry: String,
                           secondEntry: String,
                           rpm: String) -> String {
