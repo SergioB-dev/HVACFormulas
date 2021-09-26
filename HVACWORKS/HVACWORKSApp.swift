@@ -11,10 +11,8 @@ import SwiftUI
 struct HVACWORKSApp: App {
     var body: some Scene {
         WindowGroup {
-            
             NavigationView {
                 HomeView()
-                
             }
         }
     }

@@ -31,7 +31,6 @@
 		948307832644D16D00E2BFB0 /* SuperheatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948307822644D16D00E2BFB0 /* SuperheatManager.swift */; };
 		9485DAE925E5D1E900884208 /* FanLawViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9485DAE825E5D1E900884208 /* FanLawViewModel.swift */; };
 		9485DAF425E5D4E300884208 /* HVACWORKSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9485DAF325E5D4E300884208 /* HVACWORKSTests.swift */; };
-		9485DAFE25E5D80800884208 /* Practice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9485DAFD25E5D6AF00884208 /* Practice.swift */; };
 		9485DB0025E6A61600884208 /* View + TextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9485DAFF25E6A61600884208 /* View + TextFieldModifier.swift */; };
 		9485DB0225E6BADC00884208 /* VariableEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9485DB0125E6BADC00884208 /* VariableEntryView.swift */; };
 		9485DB2325E740CC00884208 /* AppReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9485DB2225E740CC00884208 /* AppReviewManager.swift */; };
@@ -94,7 +93,6 @@
 		9485DAF125E5D4E300884208 /* HVACWORKSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HVACWORKSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9485DAF325E5D4E300884208 /* HVACWORKSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HVACWORKSTests.swift; sourceTree = "<group>"; };
 		9485DAF525E5D4E300884208 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9485DAFD25E5D6AF00884208 /* Practice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practice.swift; sourceTree = "<group>"; };
 		9485DAFF25E6A61600884208 /* View + TextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + TextFieldModifier.swift"; sourceTree = "<group>"; };
 		9485DB0125E6BADC00884208 /* VariableEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariableEntryView.swift; sourceTree = "<group>"; };
 		9485DB2225E740CC00884208 /* AppReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReviewManager.swift; sourceTree = "<group>"; };
@@ -263,7 +261,6 @@
 			isa = PBXGroup;
 			children = (
 				9485DAF325E5D4E300884208 /* HVACWORKSTests.swift */,
-				9485DAFD25E5D6AF00884208 /* Practice.swift */,
 				9485DAF525E5D4E300884208 /* Info.plist */,
 			);
 			path = HVACWORKSTests;
@@ -502,7 +499,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9485DAFE25E5D80800884208 /* Practice.swift in Sources */,
 				94F023DF25DF415200974B65 /* FanLawView.swift in Sources */,
 				94254B9525C81600001E7C8F /* LatentHeatFormula.swift in Sources */,
 				94E545D525EBE3D30009F963 /* ElectricHeaderView.swift in Sources */,

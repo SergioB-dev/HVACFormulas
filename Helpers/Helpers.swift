@@ -111,7 +111,6 @@ struct MyButtonStyle: ButtonStyle {
             .foregroundColor(.white)
             .cornerRadius(8.0)
     }
-    
 }
 
 
