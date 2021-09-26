@@ -27,6 +27,8 @@
 		946B44FA25BE4CD500E57066 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 946B44F925BE4CD500E57066 /* Preview Assets.xcassets */; };
 		946B450325BE4EA300E57066 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946B450225BE4EA300E57066 /* Helpers.swift */; };
 		9476B17925F697C6003BF6B2 /* UIApplication + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9476B17825F697C6003BF6B2 /* UIApplication + Extension.swift */; };
+		9483077F2644CF7400E2BFB0 /* SuperheatSubcoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9483077E2644CF7400E2BFB0 /* SuperheatSubcoolView.swift */; };
+		948307832644D16D00E2BFB0 /* SuperheatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948307822644D16D00E2BFB0 /* SuperheatManager.swift */; };
 		9485DAE925E5D1E900884208 /* FanLawViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9485DAE825E5D1E900884208 /* FanLawViewModel.swift */; };
 		9485DAF425E5D4E300884208 /* HVACWORKSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9485DAF325E5D4E300884208 /* HVACWORKSTests.swift */; };
 		9485DAFE25E5D80800884208 /* Practice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9485DAFD25E5D6AF00884208 /* Practice.swift */; };
@@ -49,6 +51,8 @@
 		94E545DA25EBFFEE0009F963 /* CommonElectricFormulaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E545D925EBFFEE0009F963 /* CommonElectricFormulaModel.swift */; };
 		94E545DD25EC30B30009F963 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E545DC25EC30B30009F963 /* ViewModel.swift */; };
 		94F023DF25DF415200974B65 /* FanLawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F023DE25DF415200974B65 /* FanLawView.swift */; };
+		94F2DAC02603E432004CA7B8 /* View + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2DABF2603E432004CA7B8 /* View + Extension.swift */; };
+		94F2DAC22603E803004CA7B8 /* Color + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2DAC12603E803004CA7B8 /* Color + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +88,8 @@
 		946B44FB25BE4CD500E57066 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		946B450225BE4EA300E57066 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		9476B17825F697C6003BF6B2 /* UIApplication + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication + Extension.swift"; sourceTree = "<group>"; };
+		9483077E2644CF7400E2BFB0 /* SuperheatSubcoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheatSubcoolView.swift; sourceTree = "<group>"; };
+		948307822644D16D00E2BFB0 /* SuperheatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheatManager.swift; sourceTree = "<group>"; };
 		9485DAE825E5D1E900884208 /* FanLawViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanLawViewModel.swift; sourceTree = "<group>"; };
 		9485DAF125E5D4E300884208 /* HVACWORKSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HVACWORKSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9485DAF325E5D4E300884208 /* HVACWORKSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HVACWORKSTests.swift; sourceTree = "<group>"; };
@@ -108,6 +114,8 @@
 		94E545D925EBFFEE0009F963 /* CommonElectricFormulaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonElectricFormulaModel.swift; sourceTree = "<group>"; };
 		94E545DC25EC30B30009F963 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		94F023DE25DF415200974B65 /* FanLawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanLawView.swift; sourceTree = "<group>"; };
+		94F2DABF2603E432004CA7B8 /* View + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + Extension.swift"; sourceTree = "<group>"; };
+		94F2DAC12603E803004CA7B8 /* Color + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +182,7 @@
 				9485DAF225E5D4E300884208 /* HVACWORKSTests */,
 				94DD039325E051BA00046018 /* Helpers */,
 				946B44F025BE4CD400E57066 /* Products */,
+				948307A5264703FB00E2BFB0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -194,6 +203,7 @@
 				94DD038325E04EBF00046018 /* Air Formulas */,
 				94DD038525E04ECC00046018 /* Fan Laws */,
 				94E545D125EB1DEB0009F963 /* Electricity */,
+				9483077D2644CF5000E2BFB0 /* Refrigerant */,
 				946B44F625BE4CD500E57066 /* Assets.xcassets */,
 				946B44FB25BE4CD500E57066 /* Info.plist */,
 				946B44F825BE4CD500E57066 /* Preview Content */,
@@ -207,6 +217,38 @@
 				946B44F925BE4CD500E57066 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9483077D2644CF5000E2BFB0 /* Refrigerant */ = {
+			isa = PBXGroup;
+			children = (
+				948307812644D15B00E2BFB0 /* ViewModel */,
+				948307802644D15300E2BFB0 /* Views */,
+			);
+			path = Refrigerant;
+			sourceTree = "<group>";
+		};
+		948307802644D15300E2BFB0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9483077E2644CF7400E2BFB0 /* SuperheatSubcoolView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		948307812644D15B00E2BFB0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				948307822644D16D00E2BFB0 /* SuperheatManager.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		948307A5264703FB00E2BFB0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		9485DAE725E5D1DA00884208 /* ViewModel */ = {
@@ -304,10 +346,12 @@
 			isa = PBXGroup;
 			children = (
 				946B450225BE4EA300E57066 /* Helpers.swift */,
+				94F2DAC12603E803004CA7B8 /* Color + Extension.swift */,
 				9485DAFF25E6A61600884208 /* View + TextFieldModifier.swift */,
 				9485DB2225E740CC00884208 /* AppReviewManager.swift */,
 				9485DB4125E826A400884208 /* Chapters.swift */,
 				94E545D625EBEA060009F963 /* Text + Extensions.swift */,
+				94F2DABF2603E432004CA7B8 /* View + Extension.swift */,
 				9476B17825F697C6003BF6B2 /* UIApplication + Extension.swift */,
 			);
 			path = Helpers;
@@ -373,6 +417,8 @@
 			dependencies = (
 			);
 			name = HVACWORKS;
+			packageProductDependencies = (
+			);
 			productName = HVACWORKS;
 			productReference = 946B44EF25BE4CD400E57066 /* HVACWORKS.app */;
 			productType = "com.apple.product-type.application";
@@ -462,6 +508,7 @@
 				94E545D525EBE3D30009F963 /* ElectricHeaderView.swift in Sources */,
 				94254B9225C81241001E7C8F /* SensibleHeatFormula.swift in Sources */,
 				94DD039225E0519500046018 /* LatentHeatFormulaView.swift in Sources */,
+				9483077F2644CF7400E2BFB0 /* SuperheatSubcoolView.swift in Sources */,
 				9485DB0225E6BADC00884208 /* VariableEntryView.swift in Sources */,
 				94DD039B25E063C700046018 /* FanLawFormulaView.swift in Sources */,
 				941476A325C0E289008502B0 /* MixedAirView.swift in Sources */,
@@ -484,17 +531,20 @@
 				94DD039F25E0A0F200046018 /* FanLaw1EntryView.swift in Sources */,
 				94DD038E25E0512F00046018 /* TotalHeatFormulaView.swift in Sources */,
 				94175E4125EC4232008723A1 /* SelectedVariableView.swift in Sources */,
+				94F2DAC02603E432004CA7B8 /* View + Extension.swift in Sources */,
 				946B450325BE4EA300E57066 /* Helpers.swift in Sources */,
 				946A851525C7A47600A67900 /* TotalHeatFormula.swift in Sources */,
 				944856D825C663A600B4CA93 /* FormulaHeaderView.swift in Sources */,
 				9476B17925F697C6003BF6B2 /* UIApplication + Extension.swift in Sources */,
 				94E545D325EBDC930009F963 /* MultiEntryElectricView.swift in Sources */,
+				94F2DAC22603E803004CA7B8 /* Color + Extension.swift in Sources */,
 				9485DB4225E826A400884208 /* Chapters.swift in Sources */,
 				946B44F325BE4CD400E57066 /* HVACWORKSApp.swift in Sources */,
 				9446956625ED1498001EF725 /* VariableEntryRowView.swift in Sources */,
 				94DD039D25E09DA800046018 /* FanSelectionView.swift in Sources */,
 				9485DB0025E6A61600884208 /* View + TextFieldModifier.swift in Sources */,
 				9405860E25C24A020033CEE7 /* AirFormulaRouterView.swift in Sources */,
+				948307832644D16D00E2BFB0 /* SuperheatManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,7 +698,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.37.12;
+				MARKETING_VERSION = 1.37.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.UDT.HVACWORKS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -671,7 +721,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.37.12;
+				MARKETING_VERSION = 1.37.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.UDT.HVACWORKS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
