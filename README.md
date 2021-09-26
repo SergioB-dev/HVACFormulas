@@ -3,7 +3,8 @@
 
 ![image](Images/overview.png)
 
-Thank you for taking the time to check out my HVAC App. This app is pretty significant to me for the following reason:
+> ## Thank you for taking the time to check out my HVAC App. 
+### This app is pretty significant to me for the following reasons:
 
 TL;DR:
 1. It represents my transition from HVAC to Software Development
