@@ -11,7 +11,7 @@ extension View {
     func frameChapterBody(goodColors: [Color], index: Int) -> some View {
         self
         .frame(width: UIScreen.main.bounds.width * 0.45,
-                height: UIScreen.main.bounds.height * 0.4)
+                height: UIScreen.main.bounds.height * 0.37)
         .background(goodColors[index])
         .cornerRadius(10)
         .padding()

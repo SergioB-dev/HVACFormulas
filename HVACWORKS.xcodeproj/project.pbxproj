@@ -16,6 +16,11 @@
 		94175E4125EC4232008723A1 /* SelectedVariableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94175E4025EC4232008723A1 /* SelectedVariableView.swift */; };
 		94254B9225C81241001E7C8F /* SensibleHeatFormula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94254B9125C81241001E7C8F /* SensibleHeatFormula.swift */; };
 		94254B9525C81600001E7C8F /* LatentHeatFormula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94254B9425C81600001E7C8F /* LatentHeatFormula.swift */; };
+		9442B625270BBAFD003520D4 /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9442B624270BBAFD003520D4 /* HomeTabView.swift */; };
+		9442B627270BBCD7003520D4 /* FormulaPersistenceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9442B626270BBCD7003520D4 /* FormulaPersistenceScreen.swift */; };
+		9442B629270BBE1A003520D4 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9442B628270BBE1A003520D4 /* SettingsScreen.swift */; };
+		9442B62B270BBFBA003520D4 /* ControlCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9442B62A270BBFBA003520D4 /* ControlCenter.swift */; };
+		9442B630270BCAC3003520D4 /* Formulas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9442B62E270BCAC3003520D4 /* Formulas.xcdatamodeld */; };
 		9446956625ED1498001EF725 /* VariableEntryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9446956525ED1498001EF725 /* VariableEntryRowView.swift */; };
 		944856D825C663A600B4CA93 /* FormulaHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944856D725C663A600B4CA93 /* FormulaHeaderView.swift */; };
 		9452964F25C6E7DE00CD6CFD /* NumberEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9452964E25C6E7DE00CD6CFD /* NumberEntryView.swift */; };
@@ -48,7 +53,7 @@
 		94E545D525EBE3D30009F963 /* ElectricHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E545D425EBE3D30009F963 /* ElectricHeaderView.swift */; };
 		94E545D725EBEA060009F963 /* Text + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E545D625EBEA060009F963 /* Text + Extensions.swift */; };
 		94E545DA25EBFFEE0009F963 /* CommonElectricFormulaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E545D925EBFFEE0009F963 /* CommonElectricFormulaModel.swift */; };
-		94E545DD25EC30B30009F963 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E545DC25EC30B30009F963 /* ViewModel.swift */; };
+		94E545DD25EC30B30009F963 /* ElectricViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E545DC25EC30B30009F963 /* ElectricViewModel.swift */; };
 		94F023DF25DF415200974B65 /* FanLawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F023DE25DF415200974B65 /* FanLawView.swift */; };
 		94F2DAC02603E432004CA7B8 /* View + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2DABF2603E432004CA7B8 /* View + Extension.swift */; };
 		94F2DAC22603E803004CA7B8 /* Color + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2DAC12603E803004CA7B8 /* Color + Extension.swift */; };
@@ -74,6 +79,11 @@
 		94175E4025EC4232008723A1 /* SelectedVariableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedVariableView.swift; sourceTree = "<group>"; };
 		94254B9125C81241001E7C8F /* SensibleHeatFormula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensibleHeatFormula.swift; sourceTree = "<group>"; };
 		94254B9425C81600001E7C8F /* LatentHeatFormula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatentHeatFormula.swift; sourceTree = "<group>"; };
+		9442B624270BBAFD003520D4 /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
+		9442B626270BBCD7003520D4 /* FormulaPersistenceScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaPersistenceScreen.swift; sourceTree = "<group>"; };
+		9442B628270BBE1A003520D4 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
+		9442B62A270BBFBA003520D4 /* ControlCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCenter.swift; sourceTree = "<group>"; };
+		9442B62F270BCAC3003520D4 /* Formulas.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Formulas.xcdatamodel; sourceTree = "<group>"; };
 		9446956525ED1498001EF725 /* VariableEntryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariableEntryRowView.swift; sourceTree = "<group>"; };
 		944856D725C663A600B4CA93 /* FormulaHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaHeaderView.swift; sourceTree = "<group>"; };
 		9452964E25C6E7DE00CD6CFD /* NumberEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberEntryView.swift; sourceTree = "<group>"; };
@@ -110,7 +120,7 @@
 		94E545D425EBE3D30009F963 /* ElectricHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricHeaderView.swift; sourceTree = "<group>"; };
 		94E545D625EBEA060009F963 /* Text + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text + Extensions.swift"; sourceTree = "<group>"; };
 		94E545D925EBFFEE0009F963 /* CommonElectricFormulaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonElectricFormulaModel.swift; sourceTree = "<group>"; };
-		94E545DC25EC30B30009F963 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		94E545DC25EC30B30009F963 /* ElectricViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricViewModel.swift; sourceTree = "<group>"; };
 		94F023DE25DF415200974B65 /* FanLawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanLawView.swift; sourceTree = "<group>"; };
 		94F2DABF2603E432004CA7B8 /* View + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + Extension.swift"; sourceTree = "<group>"; };
 		94F2DAC12603E803004CA7B8 /* Color + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Extension.swift"; sourceTree = "<group>"; };
@@ -169,6 +179,9 @@
 			children = (
 				9485DB4325E82A2900884208 /* HomeView.swift */,
 				9405860D25C24A020033CEE7 /* AirFormulaRouterView.swift */,
+				9442B624270BBAFD003520D4 /* HomeTabView.swift */,
+				9442B628270BBE1A003520D4 /* SettingsScreen.swift */,
+				9442B626270BBCD7003520D4 /* FormulaPersistenceScreen.swift */,
 			);
 			path = RouterViews;
 			sourceTree = "<group>";
@@ -176,6 +189,7 @@
 		946B44E625BE4CD400E57066 = {
 			isa = PBXGroup;
 			children = (
+				9442B62E270BCAC3003520D4 /* Formulas.xcdatamodeld */,
 				946B44F125BE4CD400E57066 /* HVACWORKS */,
 				9485DAF225E5D4E300884208 /* HVACWORKSTests */,
 				94DD039325E051BA00046018 /* Helpers */,
@@ -393,7 +407,8 @@
 		94E545DB25EC30A00009F963 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				94E545DC25EC30B30009F963 /* ViewModel.swift */,
+				94E545DC25EC30B30009F963 /* ElectricViewModel.swift */,
+				9442B62A270BBFBA003520D4 /* ControlCenter.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -505,11 +520,12 @@
 				94254B9225C81241001E7C8F /* SensibleHeatFormula.swift in Sources */,
 				94DD039225E0519500046018 /* LatentHeatFormulaView.swift in Sources */,
 				9483077F2644CF7400E2BFB0 /* SuperheatSubcoolView.swift in Sources */,
+				9442B62B270BBFBA003520D4 /* ControlCenter.swift in Sources */,
 				9485DB0225E6BADC00884208 /* VariableEntryView.swift in Sources */,
 				94DD039B25E063C700046018 /* FanLawFormulaView.swift in Sources */,
 				941476A325C0E289008502B0 /* MixedAirView.swift in Sources */,
 				94DD039025E0517C00046018 /* SensibleHeatFormulaView.swift in Sources */,
-				94E545DD25EC30B30009F963 /* ViewModel.swift in Sources */,
+				94E545DD25EC30B30009F963 /* ElectricViewModel.swift in Sources */,
 				94E545D725EBEA060009F963 /* Text + Extensions.swift in Sources */,
 				94DD038C25E0511100046018 /* MixedAirFormulaView.swift in Sources */,
 				9452964F25C6E7DE00CD6CFD /* NumberEntryView.swift in Sources */,
@@ -519,6 +535,7 @@
 				94E545DA25EBFFEE0009F963 /* CommonElectricFormulaModel.swift in Sources */,
 				9485DB2325E740CC00884208 /* AppReviewManager.swift in Sources */,
 				9405861425C24AEF0033CEE7 /* TotalHeat.swift in Sources */,
+				9442B630270BCAC3003520D4 /* Formulas.xcdatamodeld in Sources */,
 				9485DB4425E82A2900884208 /* HomeView.swift in Sources */,
 				946A851825C7AAE200A67900 /* SimpleAnswerView.swift in Sources */,
 				94B339CD25C203470080DB8F /* MixedAirResultView.swift in Sources */,
@@ -528,6 +545,7 @@
 				94DD038E25E0512F00046018 /* TotalHeatFormulaView.swift in Sources */,
 				94175E4125EC4232008723A1 /* SelectedVariableView.swift in Sources */,
 				94F2DAC02603E432004CA7B8 /* View + Extension.swift in Sources */,
+				9442B629270BBE1A003520D4 /* SettingsScreen.swift in Sources */,
 				946B450325BE4EA300E57066 /* Helpers.swift in Sources */,
 				946A851525C7A47600A67900 /* TotalHeatFormula.swift in Sources */,
 				944856D825C663A600B4CA93 /* FormulaHeaderView.swift in Sources */,
@@ -539,7 +557,9 @@
 				9446956625ED1498001EF725 /* VariableEntryRowView.swift in Sources */,
 				94DD039D25E09DA800046018 /* FanSelectionView.swift in Sources */,
 				9485DB0025E6A61600884208 /* View + TextFieldModifier.swift in Sources */,
+				9442B627270BBCD7003520D4 /* FormulaPersistenceScreen.swift in Sources */,
 				9405860E25C24A020033CEE7 /* AirFormulaRouterView.swift in Sources */,
+				9442B625270BBAFD003520D4 /* HomeTabView.swift in Sources */,
 				948307832644D16D00E2BFB0 /* SuperheatManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -798,6 +818,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9442B62E270BCAC3003520D4 /* Formulas.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9442B62F270BCAC3003520D4 /* Formulas.xcdatamodel */,
+			);
+			currentVersion = 9442B62F270BCAC3003520D4 /* Formulas.xcdatamodel */;
+			path = Formulas.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 946B44E725BE4CD400E57066 /* Project object */;
 }

@@ -9,10 +9,12 @@ import SwiftUI
 
 @main
 struct HVACWORKSApp: App {
+    @StateObject var controlCenter = UserControlCenter()
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                HomeView()
+                HomeTabView()
+                    .environmentObject(controlCenter)
             }
         }
     }
