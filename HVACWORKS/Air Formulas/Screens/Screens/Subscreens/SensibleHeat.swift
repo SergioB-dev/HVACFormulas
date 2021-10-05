@@ -26,6 +26,7 @@ struct SensibleHeat: View {
                 } .opacity(showingDisclosure || showingDisclosureInfo ? 0 : 1.0)
                 Spacer()
                 SimpleAnswerView(firstParam: "Total CFM", secondParam: "Sensible Heat (BTUH)", firstOutput: cfmFinal, secondOutput: answer, buttonLabel: "Get Sensible Heat")
+                    .padding(.bottom, 30)
             }
         }.contentShape(Rectangle())
         .onTapGesture {

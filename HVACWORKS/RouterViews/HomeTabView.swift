@@ -18,7 +18,7 @@ struct HomeTabView: View {
             .environment(\.managedObjectContext, storageProvider.persistentContainer.viewContext)
             .tabItem {
                 Image(systemName: "plus.forwardslash.minus")
-                Text("HVAC Calculator")
+                Text("HVAC Calculator") 
             }
 
             NavigationView {
