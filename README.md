@@ -1,9 +1,10 @@
 # HVAC Formulas
 
 
+![image](Images/overview.png)
 
-
-Thank you for taking the time to check out my HVAC App. This app is pretty significant to me for the following reason:
+> ## Thank you for taking the time to check out my HVAC App. 
+### This app is pretty significant to me for the following reasons:
 
 TL;DR:
 1. It represents my transition from HVAC to Software Development
@@ -24,4 +25,9 @@ mathemetical equation require the results of other depedent mathematical equatio
   
   ---
   
+  ![image](Images/appStoreImageRow.png)
   
+  If you have no need for the services the app offers and would just like to check it out for other purposes. Please <a href = "mailto: mail@sergio.dev">email me.</a> 
+  I would be happy to share free download coupons!
+
+© 2021 Sergio Bost [Licensed under MIT License](LICENSE)
