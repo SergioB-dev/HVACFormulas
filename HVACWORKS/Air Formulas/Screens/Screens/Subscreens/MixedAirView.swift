@@ -86,7 +86,7 @@ struct MixedAirView: View{
                         }
                        Spacer()
                         MixedAirResultView(isAnimated: $isAnimated,
-                                           myClosure: mixedAirIs,
+                                           animationClosure: mixedAirIs,
                                            result: mixedAirFinal,
                                            data: airEntries,
                                             isFinalAnswerReceived: $isFinalAnswerReceived)

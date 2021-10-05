@@ -9,13 +9,10 @@ import SwiftUI
 
 @main
 struct HVACWORKSApp: App {
-    @StateObject var storageProvider = StorageProvider.shared
+    
     var body: some Scene {
         WindowGroup {
-            NavigationView {
                 HomeTabView()    
-            }.environmentObject(storageProvider)
-            .environment(\.managedObjectContext, storageProvider.persistentContainer.viewContext)
-        }
+            }
     }
 }

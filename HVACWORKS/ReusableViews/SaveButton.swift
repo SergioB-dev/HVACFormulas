@@ -13,22 +13,33 @@ struct SaveButton: View {
     @EnvironmentObject var storageProvider: StorageProvider
     let displayLabel: String
     let formulaType: Formulas
+    var width: CGFloat = UIScreen.main.bounds.width * 0.6
+    let cornRadius: CGFloat = 10
+    let action: () -> Void
     var body: some View {
         if #available(iOS 15.0, *) {
             ZStack(alignment: .topTrailing) {
-                Button(action: saveFormula){
-                    Text(displayLabel)
+                Button(action: {
+                    action()
+                    saveFormula()
+                }){
+                    Text(displayLabel).bold()
                         .padding(.vertical, 5)
                         .padding(.horizontal, 5)
+                        .frame(width: width)
                 }.buttonStyle(.borderedProminent)
-                Circle()
-                    .fill(.green)
-                    .scaledToFit()
-                    .frame(height: 8)
-                    .padding(6)
+                    saveCircle()
             }
         } else {
-            // Fallback on earlier versions
+            
+            
+            Button(action: { }){
+                Text(displayLabel).bold()
+                    .padding(.vertical, 5)
+                    .padding(.horizontal, 5)
+                    .frame(width: width)
+                    .background(Color.blue)
+            }
         }
     }
     private func saveCircle() -> some View {
@@ -38,7 +49,7 @@ struct SaveButton: View {
                   : .gray)
             .scaledToFit()
             .frame(height: 8)
-            .padding(6)
+            .padding(8)
     }
     
     private func saveFormula() {
@@ -48,7 +59,7 @@ struct SaveButton: View {
 
 struct SaveButton_Previews: PreviewProvider {
     static var previews: some View {
-        SaveButton(displayLabel: "Find Mixed Air", formulaType: .mixedAirTemp)
+        SaveButton(displayLabel: "Find Mixed Air", formulaType: .mixedAirTemp, action: { })
             .padding()
             .previewLayout(.sizeThatFits)
             .environmentObject(StorageProvider())

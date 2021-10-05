@@ -11,7 +11,7 @@ import SwiftUI
 struct MixedAirResultView: View {
     @State private var isShowingAlert = false
     @Binding var isAnimated: Bool
-    let myClosure: () -> Double
+    let animationClosure: () -> Double
     let result: Double
     let data: [AirData]
     
@@ -32,22 +32,16 @@ struct MixedAirResultView: View {
                     .foregroundColor(isFinalAnswerReceived ? .green : .primary)
                     .animation(finalAnswerAnimation)
             }
-            Button(action: {
+            
+            SaveButton(displayLabel: "Find Mixed Air", formulaType: .mixedAirTemp) {
                 guard self.data.count >= 2 else {
                     self.isShowingAlert = true
                     return
                 }
                 AppStoreReviewManager.requestReviewIfAppropriate()
-                    myClosure()
-                
-            }){
-                Text("Find Mixed Air")
-                    .fontWeight(.bold)
-                    .padding()
-                    .foregroundColor(.white)
-                    .background(data.count <= 1 ? Color.gray : .blue)
-                    .cornerRadius(10)
-            }.opacity(data.count >= 2 ? 1.0 : 0.5)
+                    _ = animationClosure()
+            }
+            .opacity(data.count >= 2 ? 1.0 : 0.5)
             .alert(isPresented: $isShowingAlert) {
                 Alert(title: Text("Must first enter at least 2 entries"), message: nil, dismissButton: .default(Text("Ok")) {
                     self.isAnimated = true
@@ -55,6 +49,17 @@ struct MixedAirResultView: View {
                 
                 )
             }
+//            Button(action: {
+//
+//
+//            }){
+//                Text("Find Mixed Air")
+//                    .fontWeight(.bold)
+//                    .padding()
+//                    .foregroundColor(.white)
+//                    .background(data.count <= 1 ? Color.gray : .blue)
+//                    .cornerRadius(10)
+//            }
             
         }
     }

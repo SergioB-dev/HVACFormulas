@@ -8,28 +8,43 @@
 import SwiftUI
 
 struct HomeTabView: View {
-    @EnvironmentObject var storageProvider: StorageProvider
+    @StateObject var storageProvider = StorageProvider.shared
     var body: some View {
         TabView {
-            HomeView()
-                .environment(\.managedObjectContext, storageProvider.persistentContainer.viewContext)
-                .tabItem {
-                    Image(systemName: "plus.forwardslash.minus")
-                    Text("HVAC Calculator")
-                }
-            FormulaPersistenceScreen()
+            NavigationView {
+                HomeView()
                 
-                .tabItem {
-                    Image(systemName: "list.bullet.rectangle.portrait.fill")
-                    Text("Saved Formulas")
-                }
-            SettingScreen()
-                .tabItem {
-                    Image(systemName: "gear")
-                    Text("Settings")
-                }
+            }
+            .environmentObject(storageProvider)
+            .environment(\.managedObjectContext, storageProvider.persistentContainer.viewContext)
+            .tabItem {
+                Image(systemName: "plus.forwardslash.minus")
+                Text("HVAC Calculator")
+            }
+
+            NavigationView {
+                FormulaPersistenceScreen()
+            }
+            .environmentObject(storageProvider)
+            .environment(\.managedObjectContext, storageProvider.persistentContainer.viewContext)
+            .tabItem {
+                Image(systemName: "list.bullet.rectangle.portrait.fill")
+                Text("Saved Formulas")
+            }
+            NavigationView {
+                SettingScreen()
+            }
+            .environmentObject(storageProvider)
+            .environment(\.managedObjectContext, storageProvider.persistentContainer.viewContext)
+            .tabItem {
+                Image(systemName: "gear")
+                Text("Settings")
+            }
             
-        }.environment(\.managedObjectContext, storageProvider.persistentContainer.viewContext)
+            .environment(\.managedObjectContext, storageProvider.persistentContainer.viewContext)
+            .environment(\.managedObjectContext, storageProvider.persistentContainer.viewContext)
+            
+        }
     }
 }
 
