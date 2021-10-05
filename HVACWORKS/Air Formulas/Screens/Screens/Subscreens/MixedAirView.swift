@@ -28,7 +28,6 @@ struct MixedAirView: View{
         Group {
             VStack {
                 FormulaHeaderView(showingDisclosure: $showingDisclosure, airFormula: .mixedAirTemp, title: "Mixed Air", subtitle: "The final air product entering the return coil.                              ")
-                
                 Group {
                     VStack {
                             VStack{
@@ -37,7 +36,7 @@ struct MixedAirView: View{
                                     Text("At least 2 entries")
                                         .font(.caption)
                                 }
-                                NumberEntryView(firstEntry: $temp, secondEntry: $cfm, selection: .constant(0), firstEntryPlaceHolder: "Temperature (Fº)", secondEntryPlaceHolder: "Cubic Feet / Minute", isLatentHeat: false,
+                                NumberEntryView(firstEntry: $temp, secondEntry: $cfm, selection: .constant(0), firstEntryPlaceHolder: "Temperature (Fº)", secondEntryPlaceHolder: "Cubic Feet / Minute",formula: .mixedAirTemp, isLatentHeat: false,
                                                 actionCode: { increment()
                                                 self.hideKeyboard()}) {
                                     clearData()

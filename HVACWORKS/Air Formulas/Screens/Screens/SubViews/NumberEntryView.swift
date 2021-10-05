@@ -16,17 +16,19 @@ struct NumberEntryView: View {
     
     var firstEntryPlaceHolder: String
     var secondEntryPlaceHolder: String
+    let formula: Formulas
     let isLatentHeat: Bool
     let actionCode: () -> ()
     let destructiveActionCode: () -> Void
    
-    init(firstEntry: Binding<String>, secondEntry: Binding<String>, selection: Binding<Int>, firstEntryPlaceHolder: String, secondEntryPlaceHolder: String, isLatentHeat: Bool, actionCode: @escaping () -> (), destructiveActionCode: @escaping () -> Void) {
+    init(firstEntry: Binding<String>, secondEntry: Binding<String>, selection: Binding<Int>, firstEntryPlaceHolder: String, secondEntryPlaceHolder: String,formula: Formulas, isLatentHeat: Bool, actionCode: @escaping () -> (), destructiveActionCode: @escaping () -> Void) {
         
         self._firstEntry = firstEntry
         self._secondEntry = secondEntry
         self._selection = selection
         self.firstEntryPlaceHolder = firstEntryPlaceHolder
         self.secondEntryPlaceHolder = secondEntryPlaceHolder
+        self.formula = formula
         self.isLatentHeat = isLatentHeat
         self.actionCode = actionCode
         self.destructiveActionCode = destructiveActionCode
@@ -71,19 +73,9 @@ struct NumberEntryView: View {
                 }.buttonStyle(PlainButtonStyle())
                 Spacer()
                 
-                Button(action: { actionCode() }) {
-                    Text("Enter").bold()
-                        .padding()
-                        .frame(height: 40)
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(4.0)
-                        .frame(height: 40)
-                }.buttonStyle(PlainButtonStyle())
+                SaveButton(plainButton: true, displayLabel: "Enter", formulaType: formula, width: 65, height: 40, cornRadius: 4.0) { actionCode() }
                 Spacer()
-            }
-               
-            
+            } 
         }
     }
     

@@ -23,7 +23,7 @@ struct TotalHeat: View {
         Group {
             VStack {
                 FormulaHeaderView(showingDisclosure: $showingDisclosure, airFormula: .totalHeat, title: "Total Heat", subtitle: "Total heat is the total heat content of the air - the sum of both sensible and latent heat")
-                NumberEntryView(firstEntry: $firstEntry, secondEntry: $secondEntry, selection: .constant(0), firstEntryPlaceHolder: "Enthalpy Difference ∆H", secondEntryPlaceHolder: "Cubic Feet per Minute", isLatentHeat: false, actionCode: addData) {
+                NumberEntryView(firstEntry: $firstEntry, secondEntry: $secondEntry, selection: .constant(0), firstEntryPlaceHolder: "Enthalpy Difference ∆H", secondEntryPlaceHolder: "Cubic Feet per Minute", formula: .totalHeat, isLatentHeat: false, actionCode: addData) {
                     deleteData()
                 }
                 

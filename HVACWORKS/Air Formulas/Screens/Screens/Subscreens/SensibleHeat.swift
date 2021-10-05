@@ -21,7 +21,7 @@ struct SensibleHeat: View {
         Group {
             VStack {
                 FormulaHeaderView(showingDisclosure: $showingDisclosure, airFormula: .sensibleHeat, title: "Sensible Heat", subtitle: "Sensible is the heat that can be perceived physically as opposed to Latent Heat")
-                NumberEntryView(firstEntry: $firstEntry, secondEntry: $secondEntry, selection: .constant(0), firstEntryPlaceHolder: "Temperature difference ∆", secondEntryPlaceHolder: "Cubic Feet per Minute", isLatentHeat: false, actionCode: addData) {
+                NumberEntryView(firstEntry: $firstEntry, secondEntry: $secondEntry, selection: .constant(0), firstEntryPlaceHolder: "Temperature difference ∆", secondEntryPlaceHolder: "Cubic Feet per Minute", formula: .sensibleHeat,isLatentHeat: false, actionCode: addData) {
                     clearData()
                 } .opacity(showingDisclosure || showingDisclosureInfo ? 0 : 1.0)
                 Spacer()

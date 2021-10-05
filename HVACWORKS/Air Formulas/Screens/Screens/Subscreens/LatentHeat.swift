@@ -29,7 +29,7 @@ struct LatentHeat: View {
         Group {
             VStack {
                 FormulaHeaderView(showingDisclosure: $showingDisclosure, airFormula: .latentHeat, title: "Latent Heat", subtitle: "Latent is the heat involved in substances changing state as opposed to heat that is sensible")
-                NumberEntryView(firstEntry: $firstEntry, secondEntry: $secondEntry, selection: $selection, firstEntryPlaceHolder: placeholder, secondEntryPlaceHolder: "Cubic Feet per Minute", isLatentHeat: true, actionCode: {
+                NumberEntryView(firstEntry: $firstEntry, secondEntry: $secondEntry, selection: $selection, firstEntryPlaceHolder: placeholder, secondEntryPlaceHolder: "Cubic Feet per Minute", formula: .latentHeat, isLatentHeat: true, actionCode: {
                     self.answer = latentHeat.latentHeat(selection: self.selection, variable: self.firstEntry, cfm: self.secondEntry)()
                     self.cfm = self.secondEntry
                     self.firstEntry = ""
