@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SettingScreen: View {
     @EnvironmentObject var controlCenter: UserControlCenter
+    
     var body: some View {
         Form {
             Section(header: Text("Formulas")) {

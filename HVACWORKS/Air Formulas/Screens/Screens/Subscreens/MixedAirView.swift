@@ -20,6 +20,7 @@ struct MixedAirView: View{
     @State private var showingDisclosure = false
     @State private var isFinalAnswerReceived = false
 
+    let storageProvider = StorageProvider.shared
     
     let mixedAirModel = MixedAirFormula()
     
@@ -143,7 +144,7 @@ struct MixedAirView: View{
         
         let subTotal = zip(temps, percentages).map(*)
         
-        
+        storageProvider.saveFormula("Mixed Air")
         
         print("SubTotals are: \(subTotal)")
         let mixedAirTotal = subTotal.reduce(0) { start, finish in

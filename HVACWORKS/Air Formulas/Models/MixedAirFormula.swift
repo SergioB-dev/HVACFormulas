@@ -8,6 +8,7 @@
 import Foundation
 
 struct MixedAirFormula {
+    let storageProvider = StorageProvider.shared
     
     func cfmPercentages(cfmComponent x: [Double]) -> [Double]{
         
@@ -24,38 +25,8 @@ struct MixedAirFormula {
         }
         print("CFM Percentages are: \(tempArray)")
         
+        storageProvider.saveFormula("Mixed Air")
+        
         return tempArray
     }
-    
-    func cfmExtracter(entry: String) -> [Double]? {
-        let extraction = entry.components(separatedBy: ", ")
-        
-        
-        var tempArray = [Double]()
-        
-        for str in extraction {
-            let number = Double(str)
-            guard let realNumber = number else {
-                continue
-            }
-            tempArray.append(realNumber)
-        }
-        print(cfmPercentages(cfmComponent: tempArray))
-        
-    return tempArray
-        
-    }
-    
-    func mainFormula(returnAirTemp w: Double,
-                     returnAirCFM x: Double,
-                     outdoorAirTemp y: Double,
-                     outdoorAirCFM z: Double) -> Double {
-        
-        //let outdoorTemp = 4
-        
-        
-        return 23.0
-    }
-    
-    
 }
