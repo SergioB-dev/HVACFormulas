@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct HomeTabView: View {
-    @EnvironmentObject var controlCenter: UserControlCenter
     @EnvironmentObject var storageProvider: StorageProvider
     var body: some View {
         TabView {
             HomeView()
+                .environment(\.managedObjectContext, storageProvider.persistentContainer.viewContext)
                 .tabItem {
                     Image(systemName: "plus.forwardslash.minus")
                     Text("HVAC Calculator")
                 }
             FormulaPersistenceScreen()
-                .environment(\.managedObjectContext, storageProvider.persistentContainer.viewContext)
+                
                 .tabItem {
                     Image(systemName: "list.bullet.rectangle.portrait.fill")
                     Text("Saved Formulas")
@@ -29,14 +29,13 @@ struct HomeTabView: View {
                     Text("Settings")
                 }
             
-        }
+        }.environment(\.managedObjectContext, storageProvider.persistentContainer.viewContext)
     }
 }
 
 struct HomeTabView_Previews: PreviewProvider {
     static var previews: some View {
         HomeTabView()
-            .environmentObject(UserControlCenter())
             .environmentObject(StorageProvider())
     }
 }

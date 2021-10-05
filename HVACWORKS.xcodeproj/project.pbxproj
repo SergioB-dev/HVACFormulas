@@ -19,7 +19,6 @@
 		9442B625270BBAFD003520D4 /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9442B624270BBAFD003520D4 /* HomeTabView.swift */; };
 		9442B627270BBCD7003520D4 /* FormulaPersistenceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9442B626270BBCD7003520D4 /* FormulaPersistenceScreen.swift */; };
 		9442B629270BBE1A003520D4 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9442B628270BBE1A003520D4 /* SettingsScreen.swift */; };
-		9442B62B270BBFBA003520D4 /* ControlCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9442B62A270BBFBA003520D4 /* ControlCenter.swift */; };
 		9442B630270BCAC3003520D4 /* Formulas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9442B62E270BCAC3003520D4 /* Formulas.xcdatamodeld */; };
 		9442B649270BF1C8003520D4 /* StorageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9442B648270BF1C8003520D4 /* StorageProvider.swift */; };
 		9446956625ED1498001EF725 /* VariableEntryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9446956525ED1498001EF725 /* VariableEntryRowView.swift */; };
@@ -42,6 +41,7 @@
 		9485DB2325E740CC00884208 /* AppReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9485DB2225E740CC00884208 /* AppReviewManager.swift */; };
 		9485DB4225E826A400884208 /* Chapters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9485DB4125E826A400884208 /* Chapters.swift */; };
 		9485DB4425E82A2900884208 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9485DB4325E82A2900884208 /* HomeView.swift */; };
+		94989E5E270CA27C0006F2DE /* SaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94989E5D270CA27C0006F2DE /* SaveButton.swift */; };
 		94B339CD25C203470080DB8F /* MixedAirResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B339CC25C203470080DB8F /* MixedAirResultView.swift */; };
 		94DD038C25E0511100046018 /* MixedAirFormulaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DD038B25E0511100046018 /* MixedAirFormulaView.swift */; };
 		94DD038E25E0512F00046018 /* TotalHeatFormulaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DD038D25E0512F00046018 /* TotalHeatFormulaView.swift */; };
@@ -83,7 +83,6 @@
 		9442B624270BBAFD003520D4 /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
 		9442B626270BBCD7003520D4 /* FormulaPersistenceScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaPersistenceScreen.swift; sourceTree = "<group>"; };
 		9442B628270BBE1A003520D4 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
-		9442B62A270BBFBA003520D4 /* ControlCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCenter.swift; sourceTree = "<group>"; };
 		9442B62F270BCAC3003520D4 /* Formulas.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Formulas.xcdatamodel; sourceTree = "<group>"; };
 		9442B648270BF1C8003520D4 /* StorageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageProvider.swift; sourceTree = "<group>"; };
 		9446956525ED1498001EF725 /* VariableEntryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariableEntryRowView.swift; sourceTree = "<group>"; };
@@ -110,6 +109,7 @@
 		9485DB2225E740CC00884208 /* AppReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReviewManager.swift; sourceTree = "<group>"; };
 		9485DB4125E826A400884208 /* Chapters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapters.swift; sourceTree = "<group>"; };
 		9485DB4325E82A2900884208 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		94989E5D270CA27C0006F2DE /* SaveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveButton.swift; sourceTree = "<group>"; };
 		94B339CC25C203470080DB8F /* MixedAirResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixedAirResultView.swift; sourceTree = "<group>"; };
 		94DD038B25E0511100046018 /* MixedAirFormulaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixedAirFormulaView.swift; sourceTree = "<group>"; };
 		94DD038D25E0512F00046018 /* TotalHeatFormulaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalHeatFormulaView.swift; sourceTree = "<group>"; };
@@ -212,6 +212,7 @@
 		946B44F125BE4CD400E57066 /* HVACWORKS */ = {
 			isa = PBXGroup;
 			children = (
+				94989E5C270CA2590006F2DE /* ReusableViews */,
 				946B44F225BE4CD400E57066 /* HVACWORKSApp.swift */,
 				9442B648270BF1C8003520D4 /* StorageProvider.swift */,
 				944856D225C6622D00B4CA93 /* RouterViews */,
@@ -281,6 +282,14 @@
 				9485DAF525E5D4E300884208 /* Info.plist */,
 			);
 			path = HVACWORKSTests;
+			sourceTree = "<group>";
+		};
+		94989E5C270CA2590006F2DE /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				94989E5D270CA27C0006F2DE /* SaveButton.swift */,
+			);
+			path = ReusableViews;
 			sourceTree = "<group>";
 		};
 		94DD038325E04EBF00046018 /* Air Formulas */ = {
@@ -411,7 +420,6 @@
 			isa = PBXGroup;
 			children = (
 				94E545DC25EC30B30009F963 /* ElectricViewModel.swift */,
-				9442B62A270BBFBA003520D4 /* ControlCenter.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -523,7 +531,6 @@
 				94254B9225C81241001E7C8F /* SensibleHeatFormula.swift in Sources */,
 				94DD039225E0519500046018 /* LatentHeatFormulaView.swift in Sources */,
 				9483077F2644CF7400E2BFB0 /* SuperheatSubcoolView.swift in Sources */,
-				9442B62B270BBFBA003520D4 /* ControlCenter.swift in Sources */,
 				9485DB0225E6BADC00884208 /* VariableEntryView.swift in Sources */,
 				94DD039B25E063C700046018 /* FanLawFormulaView.swift in Sources */,
 				941476A325C0E289008502B0 /* MixedAirView.swift in Sources */,
@@ -539,6 +546,7 @@
 				94E545DA25EBFFEE0009F963 /* CommonElectricFormulaModel.swift in Sources */,
 				9485DB2325E740CC00884208 /* AppReviewManager.swift in Sources */,
 				9405861425C24AEF0033CEE7 /* TotalHeat.swift in Sources */,
+				94989E5E270CA27C0006F2DE /* SaveButton.swift in Sources */,
 				9442B630270BCAC3003520D4 /* Formulas.xcdatamodeld in Sources */,
 				9485DB4425E82A2900884208 /* HomeView.swift in Sources */,
 				946A851825C7AAE200A67900 /* SimpleAnswerView.swift in Sources */,

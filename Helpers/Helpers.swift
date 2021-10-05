@@ -27,6 +27,7 @@ enum Formulas: String, CaseIterable {
     case latentHeat = "Latent Heat"
     case totalHeat = "Total Heat"
     case fanLaw = "Fan Law"
+
     
     @ViewBuilder func formula(airFormula: Formulas) -> some View {
         switch airFormula {

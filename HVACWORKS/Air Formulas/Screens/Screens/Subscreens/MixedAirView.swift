@@ -20,7 +20,7 @@ struct MixedAirView: View{
     @State private var showingDisclosure = false
     @State private var isFinalAnswerReceived = false
 
-    let storageProvider = StorageProvider.shared
+    @EnvironmentObject var storageProvider: StorageProvider
     
     let mixedAirModel = MixedAirFormula()
     
@@ -42,8 +42,6 @@ struct MixedAirView: View{
                                                 self.hideKeyboard()}) {
                                     clearData()
                                 }
-                                
-                                
                             }.padding(.horizontal)
                         Picker("Indoor or Outdoor Air", selection: $indoorAir) {
                             Text("Indoor").tag(true)
@@ -76,7 +74,6 @@ struct MixedAirView: View{
                                                         .foregroundColor(.white)
                                                     Text(String(entry.temperature))
                                                         .foregroundColor(.white)
-                                                    
                                                 }
                                             }.padding()
                                             .background(entry.indoor ? Color.blue : Color.orange)
@@ -84,7 +81,6 @@ struct MixedAirView: View{
                                             .padding()
                                         }
                                     }
-                                
                                 }
                             }
                         }
@@ -144,7 +140,7 @@ struct MixedAirView: View{
         
         let subTotal = zip(temps, percentages).map(*)
         
-        storageProvider.saveFormula("Mixed Air")
+        storageProvider.saveFormula(Formulas.mixedAirTemp)
         
         print("SubTotals are: \(subTotal)")
         let mixedAirTotal = subTotal.reduce(0) { start, finish in
@@ -154,18 +150,13 @@ struct MixedAirView: View{
         self.mixedAirFinal = mixedAirTotal
         self.isFinalAnswerReceived = true
         return mixedAirTotal
-        
-        
     }
+    
     private func clearData () {
         self.temp = ""
         self.cfm = ""
         self.airEntries = []
     }
-    
-    
-  
-    
 }
 
 struct Background<Content: View>: View  {
@@ -186,6 +177,7 @@ struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             MixedAirView()
+                .environmentObject(StorageProvider())
         }
     }
 }

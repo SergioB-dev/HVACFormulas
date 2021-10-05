@@ -25,8 +25,6 @@ struct MixedAirFormula {
         }
         print("CFM Percentages are: \(tempArray)")
         
-        storageProvider.saveFormula("Mixed Air")
-        
         return tempArray
     }
 }

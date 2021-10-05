@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AirFormulaMainView: View {
-       
+    @EnvironmentObject var storageProvider: StorageProvider
     var body: some View {
             VStack {
                 
@@ -17,7 +17,8 @@ struct AirFormulaMainView: View {
                     .padding(.bottom, 50)
                 ForEach(AirFormulaCases.allCases, id: \.self) { formula in
                     NavigationLink(
-                        destination: AirFormulaRouterView(formula: formula)) {
+                        destination: AirFormulaRouterView(formula: formula)
+                    ) {
                     Text(formula.rawValue).bold()
                         .padding()
                         .foregroundColor(.white)
@@ -36,5 +37,6 @@ struct AirFormulaMainView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         AirFormulaMainView()
+            .environmentObject(StorageProvider())
     }
 }

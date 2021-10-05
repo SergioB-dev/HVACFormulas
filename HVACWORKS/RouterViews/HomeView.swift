@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    
+    @EnvironmentObject var storageProvider: StorageProvider
     let chapters = Chapter.allChapters
     var body: some View {
                 LazyVGrid(columns: chapterGrid) {
@@ -57,6 +57,7 @@ struct HomeView: View {
                             tag: 0,
                             selection: $selection,
                             label: {EmptyView()})
+                           
                         NavigationLink(
                             destination: FanLawView(),
                             tag: 1,

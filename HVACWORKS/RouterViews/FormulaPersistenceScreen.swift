@@ -14,7 +14,15 @@ struct FormulaPersistenceScreen: View {
     @FetchRequest(entity: Formula.entity(), sortDescriptors: [], predicate: nil, animation: Animation.easeIn) var formulas: FetchedResults<Formula>
     var body: some View {
         List(formulas) { formula in
-            Text(formula.name ?? "Nothing to see here")
+            HStack {
+                Text(formula.name ?? "Nothing to see here")
+                Spacer()
+                if #available(iOS 15.0, *) {
+                    Text(formula.date?.formatted(date: .numeric, time: .omitted) ?? "No date")
+                } else {
+                    // Fallback on earlier versions
+                }
+            }
         }
     }
 }

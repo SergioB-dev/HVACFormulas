@@ -8,12 +8,11 @@
 import SwiftUI
 
 struct SettingScreen: View {
-    @EnvironmentObject var controlCenter: UserControlCenter
-    
+    @EnvironmentObject var storageProvider: StorageProvider
     var body: some View {
         Form {
             Section(header: Text("Formulas")) {
-                Toggle("Save answer after every calculation", isOn: $controlCenter.shouldSaveAfterEveryCalculation)
+                Toggle("Save answer after every calculation", isOn: $storageProvider.shouldSaveAfterEveryCalculation)
             }
         }
     }
@@ -22,6 +21,6 @@ struct SettingScreen: View {
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
         SettingScreen()
-            .environmentObject(UserControlCenter())
+            .environmentObject(StorageProvider())
     }
 }

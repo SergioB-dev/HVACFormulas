@@ -9,7 +9,10 @@ import CoreData
 
 class StorageProvider: ObservableObject {
     static let shared = StorageProvider()
+    
     @Published var allFormulas: [Formula] = []
+    @Published var shouldSaveAfterEveryCalculation = false
+    
     let persistentContainer: NSPersistentContainer
     
     
@@ -25,9 +28,10 @@ class StorageProvider: ObservableObject {
         self.allFormulas = self.getAllFormulas()
     }
     
-    func saveFormula(_ name: String) {
+    func saveFormula(_ formulaType: Formulas) {
         let formula = Formula(context: persistentContainer.viewContext)
-        formula.name = name
+        formula.name = formulaType.rawValue
+        formula.date = Date()
         
         do {
             try persistentContainer.viewContext.save()

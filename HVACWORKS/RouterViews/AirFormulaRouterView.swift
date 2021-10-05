@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AirFormulaRouterView: View {
+    @EnvironmentObject var storageProvider: StorageProvider
     let formula: AirFormulaCases
     var body: some View {
        router(formula: formula)
@@ -32,5 +33,6 @@ struct AirFormulaRouterView: View {
 struct RouterView_Previews: PreviewProvider {
     static var previews: some View {
         AirFormulaRouterView(formula: .mixedAirTemp)
+            .environmentObject(StorageProvider())
     }
 }
