@@ -13,7 +13,6 @@ struct HomeTabView: View {
         TabView {
             NavigationView {
                 HomeView()
-                
             }
             .environmentObject(storageProvider)
             .environment(\.managedObjectContext, storageProvider.persistentContainer.viewContext)
