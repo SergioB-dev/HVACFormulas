@@ -27,7 +27,7 @@ mathemetical equation require the results of other depedent mathematical equatio
   
   ![image](Images/appStoreImageRow.png)
   
-  If you have no need for the services the app offers and would just like to check it out for other purposes. Please [email me.](mail@sergio.dev) 
+  If you have no need for the services the app offers and would just like to check it out for other purposes. Please <a href = "mailto: mail@sergio.dev">email me.</a> 
   I would be happy to share free download coupons!
 
 © 2021 Sergio Bost [Licensed under MIT License](LICENSE)
