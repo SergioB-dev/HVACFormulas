@@ -6,12 +6,15 @@
 //
 
 import CoreData
+import SwiftUI
 
 class StorageProvider: ObservableObject {
     static let shared = StorageProvider()
-    
     @Published var allFormulas: [Formula] = []
-    @Published var shouldSaveAfterEveryCalculation = false
+
+    var saveStatus: Bool {
+        UserDefaults.standard.bool(forKey: "saveStatus")
+    }
     
     let persistentContainer: NSPersistentContainer
     
@@ -28,10 +31,13 @@ class StorageProvider: ObservableObject {
         self.allFormulas = self.getAllFormulas()
     }
     
-    func saveFormula(_ formulaType: Formulas) {
+    func saveFormula(_ formulaType: Formulas, input: [String], output: String) {
+        guard saveStatus else { return }
         let formula = Formula(context: persistentContainer.viewContext)
         formula.name = formulaType.rawValue
         formula.date = Date()
+        formula.input = input
+        formula.output = "No output yet"
         
         do {
             try persistentContainer.viewContext.save()
@@ -48,6 +54,15 @@ class StorageProvider: ObservableObject {
         } catch {
             print("Failed to fetch movies: \(error)")
             return []
+        }
+    }
+    
+    func deleteFormula(_ formula: Formula) {
+        persistentContainer.viewContext.delete(formula)
+        do {
+           try persistentContainer.viewContext.save()
+        } catch {
+            print("Could not delete item: \(error)")
         }
     }
 }

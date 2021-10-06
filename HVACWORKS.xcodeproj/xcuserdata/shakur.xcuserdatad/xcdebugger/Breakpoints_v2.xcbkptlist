@@ -191,15 +191,22 @@
             filePath = "HVACWORKS/StorageProvider.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "saveFormula(_:)"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "saveFormula(_:input:output:)"
             landmarkType = "7">
             <Actions>
                <BreakpointActionProxy
                   ActionExtensionID = "Xcode.BreakpointAction.Log">
                   <ActionContent
                      message = "@formulaType.rawValue@ formula saved successfully."
+                     conveyanceType = "1">
+                  </ActionContent>
+               </BreakpointActionProxy>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.Log">
+                  <ActionContent
+                     message = "input values are @input.description@"
                      conveyanceType = "1">
                   </ActionContent>
                </BreakpointActionProxy>

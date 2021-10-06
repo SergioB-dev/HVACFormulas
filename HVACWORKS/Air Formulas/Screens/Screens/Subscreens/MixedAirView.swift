@@ -36,6 +36,8 @@ struct MixedAirView: View{
                                     Text("At least 2 entries")
                                         .font(.caption)
                                 }
+                                // This button breaks the template because the template button saves on tap. That is not appropriate for this view.
+
                                 NumberEntryView(firstEntry: $temp, secondEntry: $cfm, selection: .constant(0), firstEntryPlaceHolder: "Temperature (Fº)", secondEntryPlaceHolder: "Cubic Feet / Minute",formula: .mixedAirTemp, isLatentHeat: false,
                                                 actionCode: { increment()
                                                 self.hideKeyboard()}) {
@@ -138,8 +140,6 @@ struct MixedAirView: View{
         print("Percentages are: \(percentages)")
         
         let subTotal = zip(temps, percentages).map(*)
-        
-        storageProvider.saveFormula(Formulas.mixedAirTemp)
         
         print("SubTotals are: \(subTotal)")
         let mixedAirTotal = subTotal.reduce(0) { start, finish in

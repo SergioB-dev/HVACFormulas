@@ -13,18 +13,36 @@ struct FormulaPersistenceScreen: View {
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(entity: Formula.entity(), sortDescriptors: [], predicate: nil, animation: Animation.easeIn) var formulas: FetchedResults<Formula>
     var body: some View {
-        List(formulas) { formula in
-            HStack {
-                Text(formula.name ?? "Nothing to see here")
-                Spacer()
-                if #available(iOS 15.0, *) {
-                    Text(formula.date?.formatted(date: .numeric, time: .omitted) ?? "No date")
-                } else {
-                    // Fallback on earlier versions
+        List {
+            Section(header: Text("Pinned")) {
+                ForEach(formulas) { formula in
+                    if #available(iOS 15.0, *) {
+                        VStack {
+                            HStack {
+                                Text(formula.name ?? "Nothing to see here")
+                                Spacer()
+                                    Text(formula.date?.formatted(date: .numeric, time: .omitted) ?? "No date")
+                              
+                            }.swipeActions {
+                                Button {
+                                    withAnimation(.spring()) {
+                                    storageProvider.deleteFormula(formula)
+                                    }
+                                } label: {
+                                    Image(systemName: "trash")
+                                }.tint(.red)
+                                
+                        }
+                            Text(formula.input?[0] ?? "Nothing to see")
+                        }
+                    } else {
+                        // Fallback on earlier versions
+                    }
                 }
             }
         }
     }
+    
 }
 
 struct FormulaPersistenceScreen_Previews: PreviewProvider {

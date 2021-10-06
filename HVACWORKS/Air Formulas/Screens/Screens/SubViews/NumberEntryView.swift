@@ -60,6 +60,40 @@ struct NumberEntryView: View {
                 .padding(.bottom)
                 
             }
+            buttonRow()
+        }
+    }
+    
+    @ViewBuilder private func buttonRow() -> some View {
+        if formula == .mixedAirTemp {
+            HStack {
+                Spacer()
+                Button(action: { destructiveActionCode() }) {
+                    Text("Reset").bold()
+                        .padding()
+                        .frame(height: 40)
+                        .background(Color.red)
+                        .foregroundColor(.white)
+                        .cornerRadius(4.0)
+                        .frame(height: 40)
+                }.buttonStyle(PlainButtonStyle())
+                
+                    Spacer()
+                    Button(action: { actionCode()
+                        self.hideKeyboard()
+                    }) {
+                        Text("Enter").bold()
+                            .padding()
+                            .frame(height: 40)
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(4.0)
+                            .frame(height: 40)
+                    }.buttonStyle(PlainButtonStyle())
+
+                    Spacer()
+            }
+        } else {
             HStack {
                 Spacer()
                 Button(action: { destructiveActionCode() }) {
@@ -73,12 +107,30 @@ struct NumberEntryView: View {
                 }.buttonStyle(PlainButtonStyle())
                 Spacer()
                 
-                SaveButton(plainButton: true, displayLabel: "Enter", formulaType: formula, width: 65, height: 40, cornRadius: 4.0) { actionCode() }
+                SaveButton(plainButton: false, displayLabel: "Enter", formulaType: formula, width: 65, height: 40, cornRadius: 4.0, input: passInput(), output: "") { actionCode() }
                 Spacer()
-            } 
+            }
+        
         }
     }
-    
+    /// A convenience method for neatly passing data from the user to save function
+    /// - Returns: An array of strings with array[0] == name of value (ex. CFM) /
+    ///    array[1] == actual value (ex. 400) /
+    ///
+    /// Can expect up to two pairs of data input.
+    /// Tuples would be more ideal here but objc cannot parse tuples.
+    /// May be an issue to improve in the future.
+    private func passInput() -> [String] {
+        //TODO: - MAKE A BETTER RETURN IN THIS CASE
+        guard !firstEntry.isEmpty else { return [""]}
+        let inputLabel = firstEntryPlaceHolder
+        let actualInput = firstEntry
+        
+        let inputLabel2 = secondEntryPlaceHolder
+        let actualInput2 = secondEntry
+        
+        return [inputLabel,actualInput, inputLabel2, actualInput2]
+    }
     
 }
 

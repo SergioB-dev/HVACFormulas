@@ -33,7 +33,7 @@ struct MixedAirResultView: View {
                     .animation(finalAnswerAnimation)
             }
             
-            SaveButton(displayLabel: "Find Mixed Air", formulaType: .mixedAirTemp) {
+            SaveButton(displayLabel: "Find Mixed Air", formulaType: .mixedAirTemp, input: [], output: "") {
                 guard self.data.count >= 2 else {
                     self.isShowingAlert = true
                     return

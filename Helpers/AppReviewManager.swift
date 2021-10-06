@@ -6,6 +6,7 @@
 //
 
 import StoreKit
+import SwiftUI
 
 enum AppStoreReviewManager {
     
@@ -69,5 +70,16 @@ extension UserDefaults {
     
     func set(_ object: Any?, forKey key: Key) {
         set(object, forKey: key.rawValue)
+    }
+}
+
+struct SaveStatus: EnvironmentKey {
+    static var defaultValue: Binding<Bool> = Binding.constant(false)
+}
+
+extension EnvironmentValues {
+    var saveStatus: Binding<Bool> {
+        get {self[SaveStatus.self] }
+        set {self[SaveStatus.self] = newValue}
     }
 }
