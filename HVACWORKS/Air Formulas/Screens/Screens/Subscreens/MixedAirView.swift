@@ -30,20 +30,7 @@ struct MixedAirView: View{
                 FormulaHeaderView(showingDisclosure: $showingDisclosure, airFormula: .mixedAirTemp, title: "Mixed Air", subtitle: "The final air product entering the return coil.                              ")
                 Group {
                     VStack {
-                            VStack{
-                                if isAnimated {
-                                    Text("Step 1: Enter entries").bold()
-                                    Text("At least 2 entries")
-                                        .font(.caption)
-                                }
-                                // This button breaks the template because the template button saves on tap. That is not appropriate for this view.
-
-                                NumberEntryView(firstEntry: $temp, secondEntry: $cfm, selection: .constant(0), firstEntryPlaceHolder: "Temperature (Fº)", secondEntryPlaceHolder: "Cubic Feet / Minute",formula: .mixedAirTemp, isLatentHeat: false,
-                                                actionCode: { increment()
-                                                self.hideKeyboard()}) {
-                                    clearData()
-                                }
-                            }.padding(.horizontal)
+                        MixedAirInputView(isAnimated: $isAnimated, temp: $temp, cfm: $cfm)
                         Picker("Indoor or Outdoor Air", selection: $indoorAir) {
                             Text("Indoor").tag(true)
                             Text("Outdoor").tag(false)
@@ -180,5 +167,7 @@ struct DetailView_Previews: PreviewProvider {
         }
     }
 }
+
+
 
 

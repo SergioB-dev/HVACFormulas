@@ -10,6 +10,7 @@ import SwiftUI
 
 
 struct NumberEntryView: View {
+    @EnvironmentObject var storageProvider: StorageProvider
     @Binding var firstEntry: String
     @Binding var secondEntry: String
     @Binding var selection: Int
@@ -61,6 +62,7 @@ struct NumberEntryView: View {
                 
             }
             buttonRow()
+
         }
     }
     
@@ -80,6 +82,7 @@ struct NumberEntryView: View {
                 
                     Spacer()
                     Button(action: { actionCode()
+                        storageProvider.saveFormula(.mixedAirTemp, input: [firstEntryPlaceHolder, firstEntry, secondEntryPlaceHolder, secondEntry], output: "No answer for MixedAir yet")
                         self.hideKeyboard()
                     }) {
                         Text("Enter").bold()

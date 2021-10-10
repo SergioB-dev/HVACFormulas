@@ -61,6 +61,7 @@
 		94F023DF25DF415200974B65 /* FanLawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F023DE25DF415200974B65 /* FanLawView.swift */; };
 		94F2DAC02603E432004CA7B8 /* View + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2DABF2603E432004CA7B8 /* View + Extension.swift */; };
 		94F2DAC22603E803004CA7B8 /* Color + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2DAC12603E803004CA7B8 /* Color + Extension.swift */; };
+		94F68BF427122B89005AD7F7 /* MixedAirInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F68BF327122B89005AD7F7 /* MixedAirInputView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +133,7 @@
 		94F023DE25DF415200974B65 /* FanLawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanLawView.swift; sourceTree = "<group>"; };
 		94F2DABF2603E432004CA7B8 /* View + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + Extension.swift"; sourceTree = "<group>"; };
 		94F2DAC12603E803004CA7B8 /* Color + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Extension.swift"; sourceTree = "<group>"; };
+		94F68BF327122B89005AD7F7 /* MixedAirInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixedAirInputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -349,6 +351,7 @@
 				9405861625C24B110033CEE7 /* LatentHeat.swift */,
 				9405861025C24ACB0033CEE7 /* SensibleHeat.swift */,
 				9405861325C24AEF0033CEE7 /* TotalHeat.swift */,
+				94F68BF327122B89005AD7F7 /* MixedAirInputView.swift */,
 			);
 			path = Subscreens;
 			sourceTree = "<group>";
@@ -554,6 +557,7 @@
 				941476A025C0D894008502B0 /* MixedAirFormula.swift in Sources */,
 				94E545DA25EBFFEE0009F963 /* CommonElectricFormulaModel.swift in Sources */,
 				9485DB2325E740CC00884208 /* AppReviewManager.swift in Sources */,
+				94F68BF427122B89005AD7F7 /* MixedAirInputView.swift in Sources */,
 				9405861425C24AEF0033CEE7 /* TotalHeat.swift in Sources */,
 				94989E5E270CA27C0006F2DE /* SaveButton.swift in Sources */,
 				9442B630270BCAC3003520D4 /* Formulas.xcdatamodeld in Sources */,
