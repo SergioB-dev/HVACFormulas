@@ -82,7 +82,6 @@ struct NumberEntryView: View {
                 
                     Spacer()
                     Button(action: { actionCode()
-                        storageProvider.saveFormula(.mixedAirTemp, input: [firstEntryPlaceHolder, firstEntry, secondEntryPlaceHolder, secondEntry], output: "No answer for MixedAir yet")
                         self.hideKeyboard()
                     }) {
                         Text("Enter").bold()

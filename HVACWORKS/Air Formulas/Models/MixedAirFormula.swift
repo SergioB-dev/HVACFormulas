@@ -10,7 +10,7 @@ import Foundation
 struct MixedAirFormula {
     let storageProvider = StorageProvider.shared
     
-    func cfmPercentages(cfmComponent x: [Double]) -> [Double]{
+    func cfmPercentages(cfmComponent x: [Double]) -> [Double] {
         
         var tempArray = [Double]()
         //let count = x.count + 1

@@ -11,6 +11,8 @@ struct MixedAirInputView: View {
     @Binding var isAnimated: Bool
     @Binding var temp: String
     @Binding var cfm: String
+    let resetCode: () -> Void
+    let actionCode: () -> Void
     
     var body: some View {
         VStack{
@@ -30,6 +32,32 @@ struct MixedAirInputView: View {
                 
                 TextField("Temp", text: $temp)
                 TextField("CFM", text: $cfm)
+                HStack {
+                    Spacer()
+                    Button(action: resetCode){
+                        Text("Reset").bold()
+                            .padding()
+                            .frame(height: 40)
+                            .background(Color.red)
+                            .foregroundColor(.white)
+                            .cornerRadius(4.0)
+                            .frame(height: 40)
+                    }
+                    Spacer()
+                    Button(action: actionCode){
+                        Text("Enter").bold()
+                            .padding()
+                            .frame(height: 40)
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(4.0)
+                            .frame(height: 40)
+                    }
+                    Spacer()
+                }
+                .buttonStyle(PlainButtonStyle())
+                .padding()
+                
             }.textFieldStyle(.roundedBorder)
         }.padding(.horizontal)
     }
@@ -37,6 +65,6 @@ struct MixedAirInputView: View {
 
 struct MixedAirInputView_Previews: PreviewProvider {
     static var previews: some View {
-        MixedAirInputView(isAnimated: .constant(true), temp: .constant("47"), cfm: .constant("23"))
+        MixedAirInputView(isAnimated: .constant(true), temp: .constant("47"), cfm: .constant("23"), resetCode: {}, actionCode: {})
     }
 }

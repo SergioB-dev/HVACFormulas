@@ -30,7 +30,9 @@ struct MixedAirView: View{
                 FormulaHeaderView(showingDisclosure: $showingDisclosure, airFormula: .mixedAirTemp, title: "Mixed Air", subtitle: "The final air product entering the return coil.                              ")
                 Group {
                     VStack {
-                        MixedAirInputView(isAnimated: $isAnimated, temp: $temp, cfm: $cfm)
+                        MixedAirInputView(isAnimated: $isAnimated, temp: $temp, cfm: $cfm, resetCode: clearData) {
+                            addAirEntry()
+                        }
                         Picker("Indoor or Outdoor Air", selection: $indoorAir) {
                             Text("Indoor").tag(true)
                             Text("Outdoor").tag(false)
@@ -93,7 +95,15 @@ struct MixedAirView: View{
     private func endEditing() {
             UIApplication.shared.endEditing()
         }
-    private func increment() {
+    
+    /// The method responsible for adding x number of air entries
+    ///
+    /// `addAirEntry()` checks two things
+    /// 1. That none of the two inputs (temperature and cfm) were left empty
+    /// 2. That user input is a valid number.
+    ///
+    /// If either two checks fail an alert is presented to the user.
+    private func addAirEntry() {
         self.isFinalAnswerReceived = false
         guard !temp.isEmpty, !cfm.isEmpty else {
             tempAlertShowing = true
@@ -110,10 +120,7 @@ struct MixedAirView: View{
         self.cfm = ""
         
     }
-    
-    private func decrement() {
-        self.entries -= 1
-    }
+
     
     private func mixedAirIs() -> Double {
         let cfmTotals = airEntries.map { $0.cfm }
