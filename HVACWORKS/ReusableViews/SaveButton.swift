@@ -13,6 +13,7 @@ import SwiftUI
 /// If it is lit then this signifies that the user opts to save every math equation this app performs.
 ///
 
+
 struct SaveButton: View {
 
     @EnvironmentObject var storageProvider: StorageProvider
@@ -26,6 +27,20 @@ struct SaveButton: View {
     var width: CGFloat = UIScreen.main.bounds.width * 0.6
     var height: CGFloat = 76
     var cornRadius: CGFloat = 10
+    
+    /// Input expects an array:
+    ///
+    /// Array should be of this format:
+    /// - [0] = First input description
+    /// - [1] = First input value
+    /// - [2] = Second input description
+    /// - [2] = Second input value
+    ///
+    /// Example case for input from Latent Heat:
+    /// - [0] = TD∆ <∆ key from ⌥ + J>
+    /// - [1] = 20
+    /// - [2] = CFM
+    /// - [3] = 1,000
     let input: [String]
     let output: String
     let action: () -> Void

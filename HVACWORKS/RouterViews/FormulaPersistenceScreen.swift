@@ -53,6 +53,13 @@ struct SavedFormulasListCell: View {
                         Text("DUMMY TEXT")
                     }
                 }
+                .toolbar {
+                    ToolbarItem(placement: .destructiveAction) {
+                        Button(action: { }){
+                            Image(systemName: "")
+                        }
+                    }
+                }
             }.swipeActions {
                 Button {
                     withAnimation(.spring()) {
