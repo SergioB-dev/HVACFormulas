@@ -15,6 +15,8 @@ struct SensibleHeat: View {
     @State private var answer = "0"
     @State private var cfmFinal = "0"
     
+    @EnvironmentObject var storageProvider: StorageProvider
+    
     let sensibleHeat = SensibleHeatFormula()
     
     var body: some View {
@@ -46,6 +48,7 @@ struct SensibleHeat: View {
         self.hideKeyboard()
         guard !firstEntry.isEmpty && !secondEntry.isEmpty else { return }
         self.answer = sensibleHeat.sensibleHeat(deltaT: firstEntry)
+        
         sensibleHeat.cfmCalc(cfm: firstEntry) { value in
             self.cfmFinal = value
             AppStoreReviewManager.requestReviewIfAppropriate()
@@ -60,5 +63,6 @@ struct SensibleHeat: View {
 struct SensibleHeat_Previews: PreviewProvider {
     static var previews: some View {
         SensibleHeat()
+            .environmentObject(StorageProvider())
     }
 }

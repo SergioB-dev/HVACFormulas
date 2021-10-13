@@ -16,6 +16,8 @@ struct LatentHeat: View {
     @State private var answer = "0"
     @State private var cfm = "0"
     
+    @EnvironmentObject var storageProvider: StorageProvider
+    
     let latentHeat = LatentHeatFormula()
     var placeholder: String {
         if selection == 0 {
@@ -31,6 +33,8 @@ struct LatentHeat: View {
                 FormulaHeaderView(showingDisclosure: $showingDisclosure, airFormula: .latentHeat, title: "Latent Heat", subtitle: "Latent is the heat involved in substances changing state as opposed to heat that is sensible")
                 NumberEntryView(firstEntry: $firstEntry, secondEntry: $secondEntry, selection: $selection, firstEntryPlaceHolder: placeholder, secondEntryPlaceHolder: "Cubic Feet per Minute", formula: .latentHeat, isLatentHeat: true, actionCode: {
                     self.answer = latentHeat.latentHeat(selection: self.selection, variable: self.firstEntry, cfm: self.secondEntry)()
+                    self.storageProvider.saveFormula(.latentHeat, input: ["Humidity Ratio in lbs. of water",
+                                                                          firstEntry, "Cubic feet per minute", secondEntry],  output: answer)
                     self.cfm = self.secondEntry
                     self.firstEntry = ""
                     self.secondEntry = ""

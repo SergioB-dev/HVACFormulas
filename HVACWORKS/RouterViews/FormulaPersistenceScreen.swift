@@ -50,7 +50,7 @@ struct SavedFormulasListCell: View {
                         Text("Output").bold()
                         Rectangle()
                             .frame(width: 50, height: 2)
-                        Text("DUMMY TEXT")
+                        Text(formula.output ?? "")
                     }
                 }
                 .toolbar {

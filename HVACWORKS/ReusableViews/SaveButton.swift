@@ -52,7 +52,6 @@ struct SaveButton: View {
         if plainButton {
             Button(action: {
                 action()
-                saveFormula()
             }) {
                 Text("Enter").bold()
                     .padding()
@@ -66,7 +65,6 @@ struct SaveButton: View {
                 ZStack(alignment: .topTrailing) {
                     Button(action: {
                         action()
-                        saveFormula()
                     }){
                         Text(displayLabel).bold()
                             .padding(.vertical, 5)
@@ -78,7 +76,6 @@ struct SaveButton: View {
             } else {
                 Button(action: {
                     action()
-                    saveFormula()
                 }){
                     Text(displayLabel).bold()
                         .padding(.vertical, 5)
@@ -99,10 +96,7 @@ struct SaveButton: View {
             .frame(height: 8)
             .padding(8)
     }
-    
-    private func saveFormula() {
-        storageProvider.saveFormula(formulaType, input: input, output: "")
-    }
+
 }
 
 struct SaveButton_Previews: PreviewProvider {

@@ -37,7 +37,7 @@ class StorageProvider: ObservableObject {
         formula.name = formulaType.rawValue
         formula.date = Date()
         formula.input = input
-        formula.output = "No output yet"
+        formula.output = output
         
         do {
             try persistentContainer.viewContext.save()
