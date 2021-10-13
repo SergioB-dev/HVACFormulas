@@ -49,6 +49,8 @@ struct SensibleHeat: View {
         guard !firstEntry.isEmpty && !secondEntry.isEmpty else { return }
         self.answer = sensibleHeat.sensibleHeat(deltaT: firstEntry)
         
+        self.storageProvider.saveFormula(.sensibleHeat, input: ["Temperature Difference",
+             firstEntry, "Cubic Feet Minute"], output: answer)
         sensibleHeat.cfmCalc(cfm: firstEntry) { value in
             self.cfmFinal = value
             AppStoreReviewManager.requestReviewIfAppropriate()
