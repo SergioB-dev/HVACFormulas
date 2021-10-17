@@ -79,7 +79,7 @@ struct MixedAirView: View{
                                            animationClosure: mixedAirIs,
                                            result: mixedAirFinal,
                                            data: airEntries,
-                                            isFinalAnswerReceived: $isFinalAnswerReceived)
+                                           isFinalAnswerReceived: $isFinalAnswerReceived)
                     }.opacity(showingDisclosure ? 0.0 : 1.0)
                 }
                 
@@ -142,6 +142,9 @@ struct MixedAirView: View{
         print("Final product is: \(mixedAirTotal)")
         self.mixedAirFinal = mixedAirTotal
         self.isFinalAnswerReceived = true
+        
+        self.storageProvider.saveFormula(.mixedAirTemp, input: ["Temperature", temp, "Cubic Feet per minute", cfm], output: String(format: "%.2f", mixedAirFinal))
+        
         return mixedAirTotal
     }
     

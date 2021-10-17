@@ -15,6 +15,7 @@ struct TotalHeat: View {
     @State private var cfmValue = "0.0"
     @State private var answer = "0"
     
+    @EnvironmentObject var storageProvider: StorageProvider
     
     
     let totalHeat = TotalHeatFormula()
@@ -46,6 +47,7 @@ struct TotalHeat: View {
             self.cfmValue = value
             AppStoreReviewManager.requestReviewIfAppropriate()
         }
+        self.storageProvider.saveFormula(.totalHeat, input: ["Enthalpy Difference", firstEntry, "Cubic Feet per Minute", secondEntry], output: answer)
         self.firstEntry = ""
         self.secondEntry = ""
         self.hideKeyboard()
@@ -59,6 +61,7 @@ struct TotalHeat: View {
 struct TotalHeat_Previews: PreviewProvider {
     static var previews: some View {
         TotalHeat()
+            .environmentObject(StorageProvider())
     }
 }
 

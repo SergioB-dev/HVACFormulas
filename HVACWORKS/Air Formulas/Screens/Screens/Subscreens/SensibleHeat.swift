@@ -48,6 +48,7 @@ struct SensibleHeat: View {
         self.hideKeyboard()
         guard !firstEntry.isEmpty && !secondEntry.isEmpty else { return }
         self.answer = sensibleHeat.sensibleHeat(deltaT: firstEntry)
+        self.storageProvider.saveFormula(.sensibleHeat, input: ["Temperature Difference", firstEntry, "Cubic Feet per Minute", secondEntry], output: answer)
         
         self.storageProvider.saveFormula(.sensibleHeat, input: ["Temperature Difference",
              firstEntry, "Cubic Feet Minute"], output: answer)
