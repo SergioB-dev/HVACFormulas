@@ -134,7 +134,6 @@ struct VariableEntryView: View {
                                 
                             }
                         }
-                        
                         Spacer()
                         
                     }.padding()

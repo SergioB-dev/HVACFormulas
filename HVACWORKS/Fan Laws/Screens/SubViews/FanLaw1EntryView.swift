@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Vision
 /// Struct responsible for producing Fan Laws output data
 
 struct FanLaw1EntryView: View {
