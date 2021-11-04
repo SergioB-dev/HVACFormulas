@@ -16,6 +16,32 @@ enum AirFormulaCases: String, CaseIterable {
     case sensibleHeat = "Sensible Heat"
     case latentHeat = "Latent Heat"
     case totalHeat = "Total Heat"
+    
+    var legendSymbol: String {  // This represents the legend symbol
+        switch self {
+        case .mixedAirTemp:
+            return "wind"
+        case .sensibleHeat:
+            return "thermometer.sun"
+        case .latentHeat:
+            return "humidity"
+        case .totalHeat:
+            return "flame"
+        }
+    }
+    
+    var legendSymbolColor: Color {
+        switch self {
+        case .mixedAirTemp:
+            return .green
+        case .sensibleHeat:
+            return .pink
+        case .latentHeat:
+            return .orange
+        case .totalHeat:
+            return .red
+        }
+    }
 }
 
 
