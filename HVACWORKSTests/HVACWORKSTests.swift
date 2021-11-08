@@ -27,5 +27,9 @@ class FormulaTests: XCTestCase {
         let answer = "19,810.771"
         XCTAssertEqual(vm.calculateFanLaw2(firstEntry: firstVar, secondEntry: secondVar, thirdEntry: thirdVar, fromCFMtoSP: false), answer)
     }
+    
+    func testMixedAirTemperature() {
+        // Needs calculation func abstracted from the view.
+    }
 }
 

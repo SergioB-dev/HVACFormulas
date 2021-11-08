@@ -8,6 +8,8 @@
 import SwiftUI
 import CoreData
 
+///Screen where all persisited equations appear.
+
 struct FormulaPersistenceScreen: View {
     
     @Environment(\.managedObjectContext) var moc
@@ -42,12 +44,10 @@ struct FormulaPersistenceScreen: View {
                         }
                     }
                 }
-                
             }
             .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.25)
         }
     }
-    
 }
 
 struct FormulaPersistenceScreen_Previews: PreviewProvider {
@@ -95,7 +95,6 @@ struct SavedFormulasListCell: View {
                 } label: {
                     Image(systemName: "trash")
                 }.tint(.red)
-                
             }
         } else {
             // Fallback on earlier versions
