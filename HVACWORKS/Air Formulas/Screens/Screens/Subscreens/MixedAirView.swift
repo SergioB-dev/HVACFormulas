@@ -82,14 +82,10 @@ struct MixedAirView: View{
                                            isFinalAnswerReceived: $isFinalAnswerReceived)
                     }.opacity(showingDisclosure ? 0.0 : 1.0)
                 }
-                
-                
                 Spacer()
             }.navigationBarBackButtonHidden(showingDisclosure ? true : false)
             .padding(.top, showingDisclosure ?  100 : 0)
         }
-      
-        
     }
     
     private func endEditing() {
@@ -118,7 +114,6 @@ struct MixedAirView: View{
         self.airEntries.append(AirData(cfm: cfmNumber, temperature: temperatureNumber, indoor: indoorAir))
         self.temp = ""
         self.cfm = ""
-        
     }
 
     

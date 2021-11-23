@@ -12,8 +12,6 @@ struct TotalHeatFormula {
         guard let cfmNumber = Double(cfm), let deltaHNumber = Double(deltaH) else { return 0}
         
         let answer = (4.5 * cfmNumber * deltaHNumber)
-
-        
         return answer
     }
     

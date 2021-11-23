@@ -40,7 +40,6 @@ struct FormulaPersistenceScreen: View {
                             Text("    - ")
                             Text(airFormula.rawValue)
                             Spacer()
-                            
                         }
                     }
                 }
@@ -63,8 +62,8 @@ struct SavedFormulasListCell: View {
     var body: some View {
         if #available(iOS 15.0, *) {
             VStack {
-                Text(formula.name?.formInitials() ?? "").bold()
                 Image(systemName: imagify(formula.name))
+                    .foregroundColor(colorfy(formula.name))
                 HStack {
                     VStack {
                         Text("Input").bold()
@@ -110,6 +109,21 @@ struct SavedFormulasListCell: View {
             return "wind"
         default:
             return "flame"
+        }
+    }
+    
+    private func colorfy(_ name: String?) -> Color {
+        switch name {
+        case "Mixed Air Temperature":
+            return .green
+        case "Sensible Heat":
+            return .pink
+        case "Latent Heat":
+            return .orange
+        case "Total Heat":
+            return .red
+        default:
+            return .blue
         }
     }
 

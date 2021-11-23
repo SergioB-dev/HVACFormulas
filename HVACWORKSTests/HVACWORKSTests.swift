@@ -32,4 +32,3 @@ class FormulaTests: XCTestCase {
         // Needs calculation func abstracted from the view.
     }
 }
-
