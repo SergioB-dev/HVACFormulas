@@ -14,6 +14,7 @@ struct FormulaPersistenceScreen: View {
     
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(entity: Formula.entity(), sortDescriptors: [], predicate: nil, animation: Animation.easeIn) var formulas: FetchedResults<Formula>
+    @State private var showLegend = false
     var body: some View {
         VStack {
             List {
@@ -22,29 +23,9 @@ struct FormulaPersistenceScreen: View {
                             SavedFormulasListCell(formula: formula)
                     }
                 }
-            }
-            ZStack {
-                Rectangle()
-                    .stroke(.black, lineWidth: 1)
-                    .padding()
-                VStack {
-                    Text("LEGEND")
-                        .bold()
-                    ForEach(AirFormulaCases.allCases, id: \.self) { airFormula in
-                        HStack {
-                            Image(systemName: airFormula.legendSymbol)
-                                .foregroundColor(airFormula.legendSymbolColor)
-                                .padding(.leading, 50)
-                                .padding(.vertical, 2)
-                                .frame(width: 50)
-                            Text("    - ")
-                            Text(airFormula.rawValue)
-                            Spacer()
-                        }
-                    }
-                }
-            }
-            .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.25)
+            }.listStyle(.plain)
+            LegendView(showLegend: $showLegend)
+                .transition(.scale)
         }
     }
 }
@@ -58,6 +39,7 @@ struct FormulaPersistenceScreen_Previews: PreviewProvider {
 
 struct SavedFormulasListCell: View {
     @EnvironmentObject var storageProvider: StorageProvider
+    
     let formula: Formula
     var body: some View {
         if #available(iOS 15.0, *) {
@@ -126,5 +108,68 @@ struct SavedFormulasListCell: View {
             return .blue
         }
     }
+    
 
+
+}
+
+struct LegendView: View {
+    @Binding var showLegend: Bool
+    var body: some View {
+        showLegendOrPlaceholder()
+    }
+    @ViewBuilder private func showLegendOrPlaceholder() -> some View {
+        if showLegend {
+            ZStack(alignment: .topTrailing) {
+                ZStack {
+                    Rectangle()
+                        .stroke(.black, lineWidth: 1)
+                        .padding()
+                    VStack {
+                        
+                        HStack {
+                            Spacer()
+                            Text("LEGEND")
+                                .bold()
+                                .offset(x: 10)
+                            Spacer()
+                                
+                        }
+                        ForEach(AirFormulaCases.allCases, id: \.self) { airFormula in
+                            HStack {
+                                Image(systemName: airFormula.legendSymbol)
+                                    .foregroundColor(airFormula.legendSymbolColor)
+                                    .padding(.leading, 50)
+                                    .padding(.vertical, 2)
+                                    .frame(width: 50)
+                                Text("    - ")
+                                Text(airFormula.rawValue)
+                                Spacer()
+                            }
+                        }
+                    }
+                }
+                .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.25)
+                Button(action: swapLegendViewState) {
+                Image(systemName: "xmark.circle")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 22)
+                }.padding(30)
+
+            }
+            
+            
+        } else {
+            Button(action: swapLegendViewState) {
+                Text("Show Legend")
+                
+            }
+        }
+    }
+    private func swapLegendViewState() {
+        withAnimation {
+            self.showLegend.toggle()
+        }
+    }
 }
