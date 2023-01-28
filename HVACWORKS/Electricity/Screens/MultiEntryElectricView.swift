@@ -24,8 +24,6 @@ struct MultiEntryElectricView: View {
                showRows()
             
                 Spacer()
-                Text("Capacitance & Inductance coming soon")
-                    .foregroundColor(.secondary)
             }
         }.contentShape(Rectangle())
         .onTapGesture {
